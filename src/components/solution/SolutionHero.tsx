@@ -21,8 +21,15 @@ const SolutionHero = () => {
                     </div>
                 </div>
             </div>
-            <div>
-                <Image src='/images/solution/solutionHero.png' alt='hero' width={588} height={392} />
+            <div className='relative'>
+                <Image src='/images/solution/solutionHero.png' alt='hero' width={588} height={392} className='z-10' />
+                <Image 
+                    src='/images/solution/blueFrame.png'
+                    alt='blue frame'
+                    width={572}
+                    height={394}
+                    className='absolute top-8 left-12 -z-10'
+                />
             </div>
         </section>
     )

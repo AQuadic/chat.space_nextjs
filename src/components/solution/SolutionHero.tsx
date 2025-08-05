@@ -4,7 +4,7 @@ import Credit from '../icons/home/Credit'
 
 const SolutionHero = () => {
     return (
-        <section className='container flex flex-wrap justify-between gap-8 xl:gap-0 pt-[50px] pb-11'>
+        <section className='container flex flex-wrap justify-between gap-8 xl:gap-0 pt-[50px] pb-8'>
             <div>
                 <h1 className='text-[#111827] md:text-5xl text-4xl font-semibold leading-[1.2] capitalize'>Engage and grow  <br /> student sign ups on <br /> 
                     <span className='text-[#00D563]'>WhatsApp</span>

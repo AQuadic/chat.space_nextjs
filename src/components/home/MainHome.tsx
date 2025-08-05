@@ -3,6 +3,7 @@ import HomeHero from "@/components/home/HomeHero";
 import Testimonials from "../general/Testimonials";
 import TrustedBrands from "./TrustedBrands";
 import HomeImpact from "./HomeImpact";
+import HomeFeatures from "./HomeFeatures";
 
 const MainHome = () => {
   return (
@@ -10,6 +11,7 @@ const MainHome = () => {
       <HomeHero />
       <TrustedBrands />
       <HomeImpact />
+      <HomeFeatures />
       <Testimonials />
     </div>
   );

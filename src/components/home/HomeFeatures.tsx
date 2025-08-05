@@ -7,7 +7,7 @@ import chatbots from '../../../public/images/home/chatbots.png'
 import sharedTeam from '../../../public/images/home/sharedTeam.png'
 const HomeFeatures = () => {
     return (
-        <section className='bg-[linear-gradient(90deg,_#EFF6FF_0%,_#ECFDF5_100%)] py-8'>
+        <section className='bg-[linear-gradient(90deg,_#EFF6FF_0%,_#ECFDF5_100%)] pt-8 pb-20'>
             <div className='container flex flex-col items-center'>
                 <h1 className='text-[#000000] text-4xl font-semibold !font-Poppins text-center'>Powerful Features for Modern Business</h1>
                 <p className='text-[#5A5A5A] text-xl leading-[150%] mt-2 text-center'>Everything you need to transform customer communication and drive business growth</p>

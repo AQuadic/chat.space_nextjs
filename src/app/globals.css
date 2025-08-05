@@ -28,3 +28,8 @@ body {
 .container {
   @apply max-w-7xl mx-auto px-4;
 }
+
+.green-gradient {
+  background: linear-gradient(90deg, #22C55E 0%, #16A34A 100%);
+
+}

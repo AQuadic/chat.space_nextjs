@@ -3,6 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import HomeIcon from "@/components/icons/404/HomeIcon";
 import BulbIcon from "@/components/icons/404/BulbIcon";
+import SearchIcon from "@/components/icons/404/SearchIcon";
+import QuestionIcon from "@/components/icons/404/QuestionIcon";
+import SupportIcon from "@/components/icons/404/SupportIcon";
 
 const NotFound404 = () => {
   return (
@@ -46,8 +49,22 @@ const NotFound404 = () => {
           <span> Frequently Asked </span>
         </Link>
       </div>
-      <div>
-        <h3>Need Help?</h3>
+      <div className="rounded-xl shadow-[0px_10px_15px_0px_#0000001A] p-4 bg-white max-w-[670px] mx-auto mb-10 sm:mb-20">
+        <h3 className="font-semibold text-xl">Need Help?</h3>
+        <div className="flex justify-center  gap-5 text-sm mt-6">
+          <div className="flex flex-col items-center gap-3">
+            <SearchIcon />
+            <p className="max-w-[129px]">Search for existing campaigns</p>
+          </div>
+          <div className="flex flex-col items-center gap-3">
+            <QuestionIcon />
+            <p>Check our documentation</p>
+          </div>
+          <div className="flex flex-col items-center gap-3">
+            <SupportIcon />
+            <p>Contact support team</p>
+          </div>
+        </div>
       </div>
     </div>
   );

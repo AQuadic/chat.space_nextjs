@@ -19,7 +19,7 @@ const Testimonials = () => {
                     {TestimonialsData.map((item, index) => (
                         <motion.div
                             key={index}
-                            className="w-[385px] h-[385px] bg-[#FFFFFF] rounded-3xl px-[22px] pt-7"
+                            className="w-[385px] py-9 bg-[#FFFFFF] rounded-3xl px-[22px] pt-7"
                             style={{ boxShadow: '0px 0px 2px 0px #00000040' }}
                             initial={{ opacity: 0, y: 50 }}
                             animate={{ opacity: 1, y: 0 }}
@@ -36,7 +36,7 @@ const Testimonials = () => {
                             <h2 className="text-[#000000] text-sm font-normal mt-[18px] capitalize leading-[200%]">
                                 &quot;{item.review}&quot;
                             </h2>
-                            <div className="mt-2 flex items-center gap-[14px]">
+                            <div className="mt-4 flex items-center gap-[14px]">
                                 <Image
                                     src={item.clientImage}
                                     alt="client"
@@ -46,8 +46,8 @@ const Testimonials = () => {
                                 />
                                 <div>
                                     <h3 className="text-[#000000] text-base font-semibold">{item.clientName}</h3>
-                                    <p className="text-[#5A5A5A] text-sm font-normal">{item.clientJob}</p>
-                                    <p className="text-[#589F55] text-sm font-semibold">{item.company}</p>
+                                    <p className="text-[#5A5A5A] text-sm font-normal mt-1">{item.clientJob}</p>
+                                    <p className="text-[#589F55] text-sm font-semibold mt-1">{item.company}</p>
                                 </div>
                             </div>
                         </motion.div>

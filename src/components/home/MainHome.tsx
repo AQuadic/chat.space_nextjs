@@ -5,6 +5,7 @@ import TrustedBrands from "./TrustedBrands";
 import HomeImpact from "./HomeImpact";
 import HomeFeatures from "./HomeFeatures";
 import WhyChatiSpace from "./WhyChatiSpace";
+import HomeIntegrations from "./HomeIntegrations";
 
 const MainHome = () => {
   return (
@@ -14,6 +15,7 @@ const MainHome = () => {
       <HomeImpact />
       <HomeFeatures />
       <WhyChatiSpace />
+      <HomeIntegrations />
       <Testimonials />
     </div>
   );

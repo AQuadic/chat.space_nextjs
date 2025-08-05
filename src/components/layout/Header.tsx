@@ -4,6 +4,7 @@ import { NavLinks } from '@/constants/NavLinks'
 import Image from 'next/image'
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import Link from 'next/link'
 
 const Header = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false)
@@ -82,9 +83,7 @@ const Header = () => {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
                         >
-                            <ul>
-                                <li className='text-[#374151] text-base font-normal px-6 cursor-pointer'>{item.title}</li>
-                            </ul>
+                            <Link href='/' className='text-[#374151] text-base font-normal px-6 cursor-pointer'>{item.title}</Link>
                         </motion.div>
                     ))}
                 </motion.div>

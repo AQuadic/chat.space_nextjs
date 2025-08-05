@@ -5,9 +5,11 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const pathname = usePathname();
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
@@ -89,7 +91,11 @@ const Header = () => {
             >
               <Link
                 href={item.path}
-                className="text-[#374151] text-base font-normal px-6 cursor-pointer"
+                className={`text-base font-normal px-6 cursor-pointer ${
+                  pathname === item.path
+                    ? "text-[#00C58E] font-semibold"
+                    : "text-[#374151]"
+                }`}
               >
                 {item.title}
               </Link>
@@ -215,13 +221,17 @@ const Header = () => {
                     }}
                     whileTap={{ scale: 0.98 }}
                   >
-                    <a
-                      href="#"
-                      className="block text-[#374151] text-base font-normal py-3 px-2 rounded-md transition-colors duration-200"
-                      onClick={closeSidebar}
+                    <Link
+                      href={item.path}
+                      className={`block text-base font-normal py-3 px-2 rounded-md transition-colors duration-200 ${pathname === item.path ? "text-[#00C58E] font-semibold" : "text-[#374151]"}`}
                     >
-                      {item.title}
-                    </a>
+                      <span
+                        onClick={closeSidebar}
+                        style={{ display: "block", width: "100%" }}
+                      >
+                        {item.title}
+                      </span>
+                    </Link>
                   </motion.li>
                 ))}
               </ul>

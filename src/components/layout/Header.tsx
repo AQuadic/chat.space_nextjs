@@ -143,11 +143,12 @@ const [activeMobileDropdown, setActiveMobileDropdown] = useState<string | null>(
                         <Link
                           key={subIdx}
                           href={sub.path}
-                          className={`flex items-center gap-2 px-2 py-3 text-[#374151] hover:bg-[#E8F5E8] hover:text-[#15803D] rounded-[8px] mx-4 text-base font-medium transition-all duration-200 ${
-                            pathname === sub.path
-                              ? "bg-[#E6F9F4] text-[#00C58E] font-semibold"
-                              : ""
-                          }`}
+                          onClick={() => setActiveDropdown(null)}
+                          className={`flex items-center gap-2 px-2 py-3 rounded-[8px] mx-4 text-base font-medium transition-all duration-200 ${
+                          pathname === sub.path
+                            ? "bg-[#E6F9F4] text-[#15803D] font-semibold border-l-4 border-[#22C55E] pl-2"
+                            : "text-[#374151] hover:bg-[#E8F5E8] hover:text-[#15803D]"
+                        }`}
                         >
                           {subIdx === 0 && <span><Broadcast /></span>}
                           {subIdx === 1 && <span><SharedTeam /></span>}

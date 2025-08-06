@@ -5,6 +5,7 @@ import DiscoverMore from '../general/DiscoverMore'
 import SolutionHero from './SolutionHero'
 import SolutionCapabilities from './SolutionCapabilities'
 import SolutionTitle from './SolutionTitle'
+import SolutionFeatures from './SolutionFeatures'
 
 const MainSolution = () => {
     return (
@@ -13,6 +14,7 @@ const MainSolution = () => {
             <SolutionBrands />
             <SolutionCapabilities />
             <SolutionTitle />
+            <SolutionFeatures />
             <Testimonials />
             <DiscoverMore />
         </div>

@@ -62,7 +62,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="w-full h-[94px] bg-[#FFFFFFF2] flex items-center justify-between container z-50">
+      <header className="w-full md:h-[94px] h-14 bg-[#FFFFFFF2] flex items-center justify-between container z-50">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}

@@ -88,7 +88,7 @@ const [activeMobileDropdown, setActiveMobileDropdown] = useState<string | null>(
 
   return (
     <>
-      <header className="w-full md:h-[94px] h-14 bg-[#FFFFFFF2] flex items-center justify-between container z-50">
+      <header className="w-full md:h-[94px] h-14 bg-[#FFFFFFF2] flex items-center justify-between container z-50 border-b border-[#F3F4F6]">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}

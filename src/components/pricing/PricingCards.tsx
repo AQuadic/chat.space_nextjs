@@ -113,6 +113,11 @@ const PricingCards = () => {
               }}
               initial={{ opacity: 0, y: 60 }}
               animate={{ opacity: 1, y: 0 }}
+              whileHover={{
+                scale: 1.04,
+                boxShadow:
+                  "0px 16px 32px 0px #00000033, 0px 8px 16px 0px #0000001A",
+              }}
               transition={{
                 duration: 0.7,
                 delay: idx * 0.15,

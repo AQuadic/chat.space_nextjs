@@ -35,11 +35,4 @@ applyTo: "**"
 - 2025-08-06: Refactored pricing cards to be 340px wide, borderless, extracted all data to a single object, used the correct check icon, ensured text color and single-line layout match the design. All errors resolved and code is production-ready.
 - 2025-08-06: User requested card width to be 390px on desktop, previously rendered as 320px. Card width now set to 390px at sm breakpoint and above.
 
-## Notes
-
-- Pricing cards must match screenshot content and style
-- Use existing color and shadow classes
-- Card width now set to 390px at sm breakpoint and above
-- All previous visual and functional refinements implemented in PricingCards.tsx
-- If further visual tweaks are needed, edit PricingCards.tsx as the single source of truth for pricing card UI
-- Always check for manual user edits before making new changes
+- Hover animations added to pricing cards using Framer Motion for scale and shadow effects (2025-08-06)

@@ -10,7 +10,7 @@ export const NavLinks = [
       { title: "Broadcast & Bulk Messages", path: "/features/broadcast" },
       { title: "Shared Team Inbox", path: "/features/team_inbox" },
       { title: "Custom Notifications", path: "/features/notifications" },
-      { title: "Multiple WhatsApp Numbers", path: "/features/numbers" },
+      { title: "Multiple WhatsApp Numbers", path: "/features/whatsapp" },
     ],
   },
   {

@@ -83,7 +83,7 @@ import CheckWithCircle from "../icons/pricing/CheckWithCircle";
 const PricingCards = () => {
   return (
     <section className="bg-[#F9FAFB] ">
-      <div className="container">
+      <div className="container pb-[96px]">
         <h1 className="text-2xl sm:text-[48px] font-semibold text-center max-w-[740px] mx-auto pt-8 sm:pt-16 mb-6">
           Choose Your Perfect Plan Simple, Transparent Pricing
         </h1>

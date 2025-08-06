@@ -3,6 +3,7 @@ import PricingCards from "@/components/pricing/PricingCards";
 import PayPerConversation from "@/components/pricing/PayPerConversation";
 import WhatsIncluded from "@/components/pricing/WhatsIncluded";
 import OptionalAddons from "@/components/pricing/OptionalAddons";
+import AdditionalSessions from "./AdditionalSessions";
 
 const MainPricing = () => {
   return (
@@ -11,6 +12,7 @@ const MainPricing = () => {
       <PayPerConversation />
       <WhatsIncluded />
       <OptionalAddons />
+      <AdditionalSessions />
     </div>
   );
 };

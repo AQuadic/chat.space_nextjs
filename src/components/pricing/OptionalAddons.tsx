@@ -42,7 +42,7 @@ const OptionalAddons = () => {
               One-Time
             </span>
           </div>
-          <div className="text-[#4B5563] text-base sm:text-lg">
+          <div className="text-[#4B5563] text-base">
             Example: Companyname.Chatispace.io
           </div>
         </motion.div>
@@ -77,7 +77,7 @@ const OptionalAddons = () => {
               /Month
             </span>
           </div>
-          <div className="text-[#4B5563] text-base sm:text-lg ">
+          <div className="text-[#4B5563] ">
             Connect Your Shopify Store Seamlessly
           </div>
         </motion.div>

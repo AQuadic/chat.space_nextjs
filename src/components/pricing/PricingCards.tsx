@@ -1,3 +1,4 @@
+"use client";
 // Pricing data extracted for maintainability
 const pricingData = [
   {
@@ -74,6 +75,7 @@ const pricingData = [
 ];
 
 import React from "react";
+import { motion } from "framer-motion";
 import Check from "@/components/icons/pricing/Check";
 import Link from "next/link";
 
@@ -101,9 +103,17 @@ const PricingCards = () => {
         {/* pricing cards */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
           {pricingData.map((plan, idx) => (
-            <div
+            <motion.div
               key={plan.title}
               className={`flex flex-col ${plan.bg} shadow-lg rounded-2xl p-8 w-[390px] h-[703px] relative`}
+              initial={{ opacity: 0, y: 60 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.7,
+                delay: idx * 0.15,
+                type: "spring",
+                stiffness: 60,
+              }}
             >
               {plan.mostPopular && (
                 <span className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary-green text-white text-sm font-semibold px-4 py-2 rounded-full shadow">
@@ -169,7 +179,7 @@ const PricingCards = () => {
               >
                 {plan.buttonText}
               </Link>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

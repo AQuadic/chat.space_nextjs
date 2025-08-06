@@ -71,7 +71,7 @@ const AdditionalSessions = () => {
           <div className="flex flex-col sm:flex-row items-center gap-8">
             {/* Chatbot Sessions Card */}
             <motion.div
-              className="flex flex-col gap-4 p-4 sm:p-8 rounded-2xl bg-bg-main-blue sm:min-w-[400px] "
+              className="flex flex-col gap-4 p-4 sm:p-8 rounded-2xl bg-bg-main-blue w-full sm:min-w-[400px] "
               initial={{ opacity: 0, y: 60 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.5 }}
@@ -112,7 +112,7 @@ const AdditionalSessions = () => {
 
             {/* Shopify Integration Card */}
             <motion.div
-              className="flex flex-col gap-2 p-4 sm:p-8 rounded-2xl bg-[#FFF7ED] sm:min-w-[400px]"
+              className="flex flex-col gap-2 p-4 sm:p-8 rounded-2xl bg-[#FFF7ED] w-full sm:min-w-[400px]"
               initial={{ opacity: 0, y: 60, borderColor: "#FFEDD5" }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.5 }}

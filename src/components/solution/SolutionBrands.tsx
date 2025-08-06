@@ -7,10 +7,10 @@ import Marquee from 'react-fast-marquee';
 const SolutionBrands = () => {
     return (
         <section className="container flex flex-col items-center py-12">
-        <h2 className="text-[#000000] text-4xl font-semibold leading-[100%] font-Poppins">
+        <h2 className="text-[#000000] md:text-4xl text-xl font-semibold leading-[100%] font-Poppins">
             Assisting Educational Institutions in Emerging Markets on Their Journey
         </h2>
-        <p className="text-[#5A5A5A] text-xl font-normal leading-[150%] mt-2.5 text-center">
+        <p className="text-[#5A5A5A] md:text-xl font-normal leading-[150%] mt-2.5 md:text-center">
             From startups to Fortune 500 companies, businesses trust Chati Space to power <br /> their customer communications
         </p>
 

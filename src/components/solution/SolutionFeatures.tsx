@@ -7,7 +7,7 @@ const SolutionFeatures = () => {
         <section className='container py-[50px]'>
             <div className='flex md:flex-row flex-col items-center justify-between'>
                 <div>
-                    <h2 className='text-[#111827] text-4xl font-semibold !font-Poppins mb-2.5'>Smarter Lead Management</h2>
+                    <h2 className='text-[#111827] md:text-4xl text-2xl font-semibold !font-Poppins mb-2.5'>Smarter Lead Management</h2>
                     <ul>
                         <li className='flex items-center gap-3 text-[#4B5563] text-base font-normal mt-3'>
                             <SolutionCheck />
@@ -28,12 +28,12 @@ const SolutionFeatures = () => {
                 </div>
             </div>
 
-            <div className='flex md:flex-row flex-col items-center justify-between'>
+            <div className='flex md:flex-row flex-col items-center justify-between md:mt-0 mt-4'>
                 <div>
                     <Image src='/images/solution/closemoresales.png' alt='image' width={440} height={440} />
                 </div>
                 <div>
-                    <h2 className='text-[#111827] text-4xl font-semibold !font-Poppins mb-2.5'>Close More Sales</h2>
+                    <h2 className='text-[#111827] md:text-4xl text-2xl font-semibold !font-Poppins mb-2.5'>Close More Sales</h2>
                     <ul>
                         <li className='flex items-center gap-3 text-[#4B5563] text-base font-normal mt-3'>
                             <SolutionCheck />
@@ -51,9 +51,9 @@ const SolutionFeatures = () => {
                 </div>
             </div>
 
-            <div className='flex md:flex-row flex-col items-center justify-between'>
+            <div className='flex md:flex-row flex-col items-center justify-between md:mt-0 mt-4'>
                 <div>
-                    <h2 className='text-[#111827] text-4xl font-semibold !font-Poppins mb-2.5'>Better Learning Outcomes</h2>
+                    <h2 className='text-[#111827] md:text-4xl text-2xl font-semibold !font-Poppins mb-2.5'>Better Learning Outcomes</h2>
                     <ul>
                         <li className='flex items-center gap-3 text-[#4B5563] text-base font-normal mt-3'>
                             <SolutionCheck />

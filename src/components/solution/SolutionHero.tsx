@@ -28,7 +28,7 @@ const SolutionHero = () => {
                     alt='blue frame'
                     width={572}
                     height={394}
-                    className='absolute top-8 left-12 -z-10'
+                    className='md:block hidden absolute top-8 left-12 -z-10'
                 />
             </div>
         </section>

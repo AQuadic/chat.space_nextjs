@@ -9,10 +9,10 @@ const Testimonials = () => {
     return (
         <section className="w-full pt-12 pb-[72px] bg-[#FFFEED]">
             <div className="container">
-                <h1 className="text-[#111827] text-4xl font-bold text-center">
+                <h1 className="text-[#111827] md:text-4xl text-2xl font-bold text-center">
                     Over 14,000 Customers Worldwide
                 </h1>
-                <p className="text-[#4B5563] text-[22px] leading-7 font-normal mt-[18px] text-center">
+                <p className="text-[#4B5563] xl:text-[22px] text-lg leading-7 font-normal mt-[18px] text-center">
                     What our customers across 180+ countries say about us.
                 </p>
                 <div className="flex flex-wrap items-center justify-center gap-4 mt-[42px]">

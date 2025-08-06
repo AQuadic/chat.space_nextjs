@@ -4,7 +4,7 @@ import React from 'react'
 
 const SolutionCapabilities = () => {
     return (
-        <section className='bg-[#B9EBFFCC] p-20'>
+        <section className='bg-[#B9EBFFCC] md:p-20 p-4'>
             <div className='container grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8'>
                 {SolutionCapabilitiesData.map((item,index) => (
                 <div key={index} className='lg:w-[384px] w-full lg:h-[212px] h-full bg-[#FFFFFF] rounded-2xl p-8'

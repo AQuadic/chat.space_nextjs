@@ -1,3 +1,4 @@
+import SharedTeamCapabilities from '@/components/features/sharedTeam/SharedTeamCapabilities'
 import SharedTeamHero from '@/components/features/sharedTeam/SharedTeamHero'
 import DiscoverMore from '@/components/general/DiscoverMore'
 import Testimonials from '@/components/general/Testimonials'
@@ -7,6 +8,7 @@ const page = () => {
     return (
         <div>
             <SharedTeamHero />
+            <SharedTeamCapabilities />
             <Testimonials />
             <DiscoverMore />
         </div>

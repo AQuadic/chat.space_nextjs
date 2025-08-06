@@ -1,5 +1,81 @@
+// Pricing data extracted for maintainability
+const pricingData = [
+  {
+    title: "Chati Space Growth",
+    price: "$119",
+    oldPrice: "$130",
+    priceNote: "Billed Annually",
+    subNote: "Max Users: 3",
+    features: [
+      { text: "Official WhatsApp API" },
+      { text: "Message Broadcasts & Scheduling" },
+      { text: "Team Inbox" },
+      { text: "Broadcast Limit: 15,000 Per Month" },
+      { text: "Manual Message Routing" },
+      { text: "1,000 Free Automation Triggers/Month" },
+      { text: "Basic Chatbots" },
+      { text: "Keywords Actions" },
+      { text: "WhatsApp Catalog" },
+      { text: "Instagram DM Integration", new: true },
+      { text: "FB Messenger Integration", new: true },
+    ],
+    buttonText: "Book A Demo",
+    bg: "bg-[var(--color-bg-main-pink)]",
+    buttonBg: "bg-[var(--color-primary-pink)]",
+  },
+  {
+    title: "Chati Space Pro",
+    price: "$179",
+    oldPrice: "$215",
+    priceNote: "Billed Annually",
+    subNote: "5 Users Included",
+    extraNote: "Additional Users: $49/User/Month",
+    highlight: "Everything in Growth +",
+    features: [
+      { text: "Advanced & Interconnected Chatbots" },
+      { text: "Smart Broadcast Retarget + Carousel Templates" },
+      { text: "Granular User Roles" },
+      { text: "Sequences (WhatsApp Drip Campaigns)" },
+      { text: "2,000 Free Automation Triggers/Month" },
+      { text: "5 Select Integrations (E.G., HubSpot)" },
+      { text: "AI KnowBot With 250 Free Responses/Month" },
+      { text: "Instagram DM Automations", new: true },
+      { text: "FB Messenger Automations", new: true },
+      { text: "PayTabs Integration", new: true },
+    ],
+    buttonText: "Book A Demo",
+    bg: "bg-[var(--color-bg-main-green)]",
+    buttonBg: "bg-[var(--color-primary-green)]",
+    mostPopular: true,
+    minHeight: 650,
+  },
+  {
+    title: "Chati Space Custom",
+    price: "Custom",
+    priceNote: "For Large Teams And High Scale",
+    highlight: "Everything In Pro +",
+    features: [
+      { text: "24/7 Support and Success Manager" },
+      { text: "White Glove Support & Onboarding" },
+      { text: "Automatic Chat Assignment (Round-Robin)" },
+      { text: "CTWA Retargeting & Conversion Funnel" },
+      { text: "Auto Deletion of Chats" },
+      { text: "Phone Number Masking for Privacy" },
+      { text: "Free Custom Domain" },
+      { text: "IP Whitelisting" },
+      { text: "Salesforce Integration" },
+      { text: "Instagram DM / FB Messenger Automations", new: true },
+      { text: "PayTabs Integration", new: true },
+    ],
+    buttonText: "Contact Us",
+    bg: "bg-[var(--color-bg-main-blue)]",
+    buttonBg: "bg-[var(--color-primary-blue)]",
+  },
+];
+
 import React from "react";
-import CheckWithCircle from "@/components/icons/pricing/CheckWithCircle";
+import Check from "@/components/icons/pricing/Check";
+import Link from "next/link";
 
 const PricingCards = () => {
   return (
@@ -10,22 +86,91 @@ const PricingCards = () => {
         </h1>
         <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-10 mb-8 sm:mb-14">
           <div className="flex items-center justify-center gap-2">
-            <CheckWithCircle />
-            <p>14-day free trial</p>
-          </div>{" "}
+            <Check />
+            <p className="text-[#171717] font-medium">14-day free trial</p>
+          </div>
           <div className="flex items-center justify-center gap-2">
-            <CheckWithCircle />
-            <p>No setup fees</p>
-          </div>{" "}
+            <Check />
+            <p className="text-[#171717] font-medium">No setup fees</p>
+          </div>
           <div className="flex items-center justify-center gap-2">
-            <CheckWithCircle />
-            <p>Cancel anytime</p>
+            <Check />
+            <p className="text-[#171717] font-medium">Cancel anytime</p>
           </div>
         </div>
-        <div>
-          <div className="bg-bg-main-pink"></div>
-          <div className="bg-bg-main-green"></div>
-          <div className="bg-bg-main-blue"></div>
+        {/* pricing cards */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+          {pricingData.map((plan, idx) => (
+            <div
+              key={plan.title}
+              className={`flex flex-col ${plan.bg} shadow-lg rounded-2xl p-8 w-[390px] h-[703px] relative`}
+            >
+              {plan.mostPopular && (
+                <span className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary-green text-white text-sm font-semibold px-4 py-2 rounded-full shadow">
+                  Most Popular
+                </span>
+              )}
+              <h2 className="text-xl sm:text-2xl font-bold mb-2 text-[#1F2937] whitespace-nowrap">
+                {plan.title}
+              </h2>
+              {plan.price && (
+                <div className="flex items-end gap-2 mb-1">
+                  <span className="text-3xl font-bold text-[#171717]">
+                    {plan.price}
+                  </span>
+                  {plan.oldPrice && (
+                    <span className="line-through text-[#6B7280] text-2xl font-medium ml-4">
+                      {plan.oldPrice}
+                    </span>
+                  )}
+                </div>
+              )}
+              {plan.priceNote && (
+                <div className="text-sm text-gray-500  whitespace-nowrap mt-4">
+                  {plan.priceNote}
+                </div>
+              )}
+              {plan.subNote && (
+                <div className="text-sm text-gray-500  whitespace-nowrap">
+                  {plan.subNote}
+                </div>
+              )}
+              {plan.extraNote && (
+                <div className="text-xs text-gray-400  whitespace-nowrap ">
+                  {plan.extraNote}
+                </div>
+              )}
+              {plan.highlight && (
+                <div className="text-sm font-medium mt-4 text-[#374151] whitespace-nowrap">
+                  {plan.highlight}
+                </div>
+              )}
+              <ul className="flex-1 flex flex-col gap-2 mt-4">
+                {plan.features.map((feature, i) => (
+                  <li
+                    key={i}
+                    className="flex items-center gap-2 text-[#171717] max-w-[320px]"
+                  >
+                    <Check />
+                    <span className="max-w-[320px]">
+                      {feature.text}
+                      {feature.new && (
+                        <span className="ml-1 text-xs bg-green-100 text-green-600 rounded px-2 py-0.5">
+                          New
+                        </span>
+                      )}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+              <Link
+                href="#"
+                className={`mt-auto w-full text-center ${plan.buttonBg} text-white font-semibold py-3 rounded-lg transition hover:brightness-110 whitespace-nowrap`}
+              >
+                {plan.buttonText}
+              </Link>
+            </div>
+          ))}
         </div>
       </div>
     </section>

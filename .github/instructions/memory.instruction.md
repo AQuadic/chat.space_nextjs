@@ -14,28 +14,32 @@ applyTo: "**"
 ## Project Context
 
 - Current project type: web app
-- Tech stack: Next.js, React, TypeScript, Tailwind CSS
-- Architecture patterns: component-based
-- Key requirements: design consistency, use of custom colors/shadows, production-ready UI
+- Tech stack: Next.js, React, TypeScript, Tailwind CSS, Framer Motion
+- Architecture patterns: component-based, data-driven UI
+- Key requirements: pixel-perfect UI, responsive design, animation, custom theming
 
 ## Coding Patterns
 
-- Uses functional React components
-- Tailwind CSS for styling
-- Organized by feature folders
-- Prefers clear, maintainable code
-- Testing: not specified, but expects robust UI
-- Documentation: not specified
+- Data-driven rendering for pricing cards
+- Responsive design using Tailwind breakpoints
+- Custom icons for feature lists
+- Inline style for custom box-shadow
+- Framer Motion for card animation
+- Button always at the bottom using flex
 
 ## Context7 Research History
 
-- None yet for this project
+- No Context7 research performed yet for pricing card width; all changes based on user design and direct feedback
 
 - 2025-08-06: User requested to design pricing cards in PricingCards.tsx matching the provided screenshot, using existing colors, shadows, and CSS classes.
 - 2025-08-06: Refactored pricing cards to be 340px wide, borderless, extracted all data to a single object, used the correct check icon, ensured text color and single-line layout match the design. All errors resolved and code is production-ready.
+- 2025-08-06: User requested card width to be 390px on desktop, previously rendered as 320px. Card width now set to 390px at sm breakpoint and above.
 
 ## Notes
 
 - Pricing cards must match screenshot content and style
 - Use existing color and shadow classes
-- Update memory after each step
+- Card width now set to 390px at sm breakpoint and above
+- All previous visual and functional refinements implemented in PricingCards.tsx
+- If further visual tweaks are needed, edit PricingCards.tsx as the single source of truth for pricing card UI
+- Always check for manual user edits before making new changes

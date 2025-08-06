@@ -106,7 +106,11 @@ const PricingCards = () => {
           {pricingData.map((plan, idx) => (
             <motion.div
               key={plan.title}
-              className={`flex flex-col ${plan.bg} shadow-lg rounded-2xl p-8 w-[390px] h-[703px] relative`}
+              className={`flex flex-col ${plan.bg} rounded-2xl p-4 sm:p-8 w-full sm:max-w-[390px] sm:w-[390px] sm:h-[703px] h-auto relative`}
+              style={{
+                boxShadow:
+                  "0px 10px 15px 0px #0000001A, 0px 4px 6px 0px #0000001A",
+              }}
               initial={{ opacity: 0, y: 60 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{
@@ -121,46 +125,46 @@ const PricingCards = () => {
                   Most Popular
                 </span>
               )}
-              <h2 className="text-xl sm:text-2xl font-bold mb-2 text-[#1F2937] whitespace-nowrap">
+              <h2 className="text-lg sm:text-xl font-bold mb-2 text-[#1F2937] whitespace-nowrap">
                 {plan.title}
               </h2>
               {plan.price && (
-                <div className="flex items-end gap-2 mb-1">
-                  <span className="text-3xl font-bold text-[#171717]">
+                <div className="flex items-center gap-2 mb-1">
+                  <span className="text-2xl sm:text-[36px] font-bold text-[#171717]">
                     {plan.price}
                   </span>
                   {plan.oldPrice && (
-                    <span className="line-through text-[#6B7280] text-2xl font-medium ml-4">
+                    <span className="line-through text-[#6B7280] text-lg sm:text-2xl font-medium ml-4">
                       {plan.oldPrice}
                     </span>
                   )}
                 </div>
               )}
               {plan.priceNote && (
-                <div className="text-sm text-gray-500  whitespace-nowrap mt-4">
+                <div className="text-xs sm:text-sm text-gray-500 whitespace-nowrap mt-4">
                   {plan.priceNote}
                 </div>
               )}
               {plan.subNote && (
-                <div className="text-sm text-gray-500  whitespace-nowrap">
+                <div className="text-xs sm:text-sm text-gray-500 whitespace-nowrap">
                   {plan.subNote}
                 </div>
               )}
               {plan.extraNote && (
-                <div className="text-xs text-gray-400  whitespace-nowrap ">
+                <div className="text-xs text-gray-400 whitespace-nowrap ">
                   {plan.extraNote}
                 </div>
               )}
               {plan.highlight && (
-                <div className="text-sm font-medium mt-4 text-[#374151] whitespace-nowrap">
+                <div className="text-xs sm:text-sm font-medium mt-4 text-[#374151] whitespace-nowrap">
                   {plan.highlight}
                 </div>
               )}
-              <ul className="flex-1 flex flex-col gap-2 mt-4">
+              <ul className="flex-1 flex flex-col gap-2 mt-2 mb-4 sm:mb-6">
                 {plan.features.map((feature, i) => (
                   <li
                     key={i}
-                    className="flex items-center gap-2 text-[#171717] max-w-[320px]"
+                    className="flex items-center gap-2 text-[#171717] max-w-[320px] text-sm sm:text-base"
                   >
                     <Check />
                     <span className="max-w-[320px]">

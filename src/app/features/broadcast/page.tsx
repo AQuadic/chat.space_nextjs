@@ -1,4 +1,5 @@
 import BroadcastCapabilities from '@/components/features/broadcast/BroadcastCapabilities'
+import BroadcastFeatures from '@/components/features/broadcast/BroadcastFeatures'
 import BroadcastHero from '@/components/features/broadcast/BroadcastHero'
 import DiscoverMore from '@/components/general/DiscoverMore'
 import Testimonials from '@/components/general/Testimonials'
@@ -9,6 +10,7 @@ const page = () => {
         <section>
             <BroadcastHero />
             <BroadcastCapabilities />
+            <BroadcastFeatures />
             <Testimonials />
             <DiscoverMore />
         </section>

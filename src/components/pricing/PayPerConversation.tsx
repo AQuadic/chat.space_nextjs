@@ -3,6 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Conversation from "@/components/icons/pricing/Conversation";
 import Initiated from "@/components/icons/pricing/Initiated";
+import Link from "next/link";
 
 const PayPerConversation = () => {
   return (
@@ -66,6 +67,19 @@ const PayPerConversation = () => {
           </p>
         </motion.div>
       </div>
+      <motion.div
+        className="mt-12 flex justify-center items-start max-w-fit mx-auto"
+        whileHover={{ scale: 1.06, boxShadow: "0px 8px 24px 0px #00C58E33" }}
+        whileTap={{ scale: 0.97 }}
+        transition={{ type: "spring", stiffness: 400, damping: 20 }}
+      >
+        <Link
+          href="/"
+          className="text-white font-semibold bg-[#00C58E] px-8 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#00C58E] transition-all duration-200"
+        >
+          Calculate Pricing by Country
+        </Link>
+      </motion.div>
     </section>
   );
 };

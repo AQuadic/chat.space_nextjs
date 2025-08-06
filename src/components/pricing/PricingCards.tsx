@@ -78,6 +78,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Check from "@/components/icons/pricing/Check";
 import Link from "next/link";
+import CheckWithCircle from "../icons/pricing/CheckWithCircle";
 
 const PricingCards = () => {
   return (
@@ -88,15 +89,15 @@ const PricingCards = () => {
         </h1>
         <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-10 mb-8 sm:mb-14">
           <div className="flex items-center justify-center gap-2">
-            <Check />
+            <CheckWithCircle />
             <p className="text-[#171717] font-medium">14-day free trial</p>
           </div>
           <div className="flex items-center justify-center gap-2">
-            <Check />
+            <CheckWithCircle />
             <p className="text-[#171717] font-medium">No setup fees</p>
           </div>
           <div className="flex items-center justify-center gap-2">
-            <Check />
+            <CheckWithCircle />
             <p className="text-[#171717] font-medium">Cancel anytime</p>
           </div>
         </div>

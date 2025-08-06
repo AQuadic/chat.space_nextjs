@@ -9,7 +9,12 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-
+  --color-bg-main-pink: #fce7f3;
+  --color-bg-main-blue: #dbeafe;
+  --color-bg-main-green: #dcfce7;
+  --color-primary-pink: #ec4899;
+  --color-primary-green: #22c55e;
+  --color-primary-blue: #3b82f6;
 }
 
 /*@media (prefers-color-scheme: dark) {*/
@@ -30,6 +35,5 @@ body {
 }
 
 .green-gradient {
-  background: linear-gradient(90deg, #22C55E 0%, #16A34A 100%);
-
+  background: linear-gradient(90deg, #22c55e 0%, #16a34a 100%);
 }

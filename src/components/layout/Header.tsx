@@ -2,14 +2,21 @@
 
 import { NavLinks } from "@/constants/NavLinks";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useState,useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Broadcast from "../icons/header/Broadcast";
+import SharedTeam from "../icons/header/SharedTeam";
+import CustomNotifications from "../icons/header/CustomNotifications";
+import Phone from "../icons/header/Phone";
 
 const Header = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const pathname = usePathname();
+  const dropdownRef = useRef<HTMLDivElement>(null);
+const [activeMobileDropdown, setActiveMobileDropdown] = useState<string | null>(null);
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
@@ -19,7 +26,7 @@ const Header = () => {
     setIsSidebarOpen(false);
   };
 
-  const overlayVariants = {
+   const overlayVariants = {
     closed: {
       opacity: 0,
       transition: {
@@ -60,6 +67,25 @@ const Header = () => {
     },
   };
 
+  const toggleDropdown = (title: string) => {
+    setActiveDropdown((prev) => (prev === title ? null : title));
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        setActiveDropdown(null);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
     <>
       <header className="w-full md:h-[94px] h-14 bg-[#FFFFFFF2] flex items-center justify-between container z-50">
@@ -78,6 +104,7 @@ const Header = () => {
 
         <motion.div
           className="hidden lg:flex items-center gap-10"
+          ref={dropdownRef}
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
@@ -88,17 +115,63 @@ const Header = () => {
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
-            >
-              <Link
-                href={item.path}
-                className={`text-base font-normal px-6 cursor-pointer ${
-                  pathname === item.path
-                    ? "text-[#00C58E] font-semibold"
-                    : "text-[#374151]"
-                }`}
-              >
-                {item.title}
-              </Link>
+              className="relative">
+              {item.subLinks ? (
+                <>
+                  <button
+                    onClick={() => toggleDropdown(item.title)}
+                    className={`text-base font-normal px-6 cursor-pointer focus:outline-none ${
+                      pathname.startsWith(item.path)
+                        ? "text-[#00C58E] font-semibold"
+                        : "text-[#374151]"
+                    }`}
+                  >
+                    {item.title}
+                  </button>
+
+                <AnimatePresence>
+                  {activeDropdown === item.title && (
+                    <motion.div
+                      key="dropdown"
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      transition={{ duration: 0.25 }}
+                      className="absolute top-full -left-20 mt-2 w-72 bg-white shadow-md rounded-xl py-2 z-50"
+                    >
+                      {item.subLinks.map((sub, subIdx) => (
+                        <Link
+                          key={subIdx}
+                          href={sub.path}
+                          className={`flex items-center gap-2 px-2 py-3 text-[#374151] hover:bg-[#E8F5E8] hover:text-[#15803D] rounded-[8px] mx-4 text-base font-medium transition-all duration-200 ${
+                            pathname === sub.path
+                              ? "bg-[#E6F9F4] text-[#00C58E] font-semibold"
+                              : ""
+                          }`}
+                        >
+                          {subIdx === 0 && <span><Broadcast /></span>}
+                          {subIdx === 1 && <span><SharedTeam /></span>}
+                          {subIdx === 2 && <span><CustomNotifications /></span>}
+                          {subIdx === 3 && <span><Phone /></span>}
+                          <span>{sub.title}</span>
+                        </Link>
+                      ))}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+                </>
+              ) : (
+                <Link
+                  href={item.path}
+                  className={`text-base font-normal px-6 cursor-pointer ${
+                    pathname === item.path
+                      ? "text-[#00C58E] font-semibold"
+                      : "text-[#374151]"
+                  }`}
+                >
+                  {item.title}
+                </Link>
+              )}
             </motion.div>
           ))}
         </motion.div>
@@ -215,23 +288,88 @@ const Header = () => {
                   <motion.li
                     key={index}
                     variants={menuItemVariants}
-                    whileHover={{
-                      x: 10,
-                      backgroundColor: "rgba(243, 244, 246, 0.5)",
-                    }}
-                    whileTap={{ scale: 0.98 }}
+                    className="w-full"
                   >
-                    <Link
-                      href={item.path}
-                      className={`block text-base font-normal py-3 px-2 rounded-md transition-colors duration-200 ${pathname === item.path ? "text-[#00C58E] font-semibold" : "text-[#374151]"}`}
-                    >
-                      <span
+                    {item.subLinks ? (
+                      <>
+                        <button
+                          onClick={() =>
+                            setActiveMobileDropdown(
+                              activeMobileDropdown === item.title ? null : item.title
+                            )
+                          }
+                          className={`flex justify-between items-center w-full text-base font-normal py-3 px-2 rounded-md transition-colors duration-200 ${
+                            pathname.startsWith(item.path)
+                              ? "text-[#00C58E] font-semibold"
+                              : "text-[#374151]"
+                          }`}
+                        >
+                          <span>{item.title}</span>
+                          <svg
+                            className={`w-4 h-4 transform transition-transform duration-300 ${
+                              activeMobileDropdown === item.title ? "rotate-90" : ""
+                            }`}
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth={2}
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              d="M9 5l7 7-7 7"
+                            />
+                          </svg>
+                        </button>
+
+                        <AnimatePresence initial={false}>
+                          {activeMobileDropdown === item.title && (
+                            <motion.div
+                              key="submenu"
+                              initial={{ opacity: 0, height: 0 }}
+                              animate={{ opacity: 1, height: "auto" }}
+                              exit={{ opacity: 0, height: 0 }}
+                              transition={{ duration: 0.3 }}
+                              className="overflow-hidden ml-4"
+                            >
+                              <ul className="mt-2 space-y-2">
+                                {item.subLinks.map((sub, subIdx) => (
+                                  <li key={subIdx}>
+                                    <Link
+                                      href={sub.path}
+                                      className={`flex items-center gap-2 px-3 py-2 rounded-md text-sm transition-all duration-200 ${
+                                        pathname === sub.path
+                                          ? "bg-[#E6F9F4] text-[#00C58E] font-semibold"
+                                          : "text-[#374151] hover:bg-[#F3F4F6]"
+                                      }`}
+                                      onClick={closeSidebar}
+                                    >
+                                      {subIdx === 0 && <Broadcast />}
+                                      {subIdx === 1 && <SharedTeam />}
+                                      {subIdx === 2 && <CustomNotifications />}
+                                      {subIdx === 3 && <Phone />}
+                                      <span>{sub.title}</span>
+                                    </Link>
+                                  </li>
+                                ))}
+                              </ul>
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
+                      </>
+                    ) : (
+                      <Link
+                        href={item.path}
                         onClick={closeSidebar}
-                        style={{ display: "block", width: "100%" }}
+                        className={`block text-base font-normal py-3 px-2 rounded-md transition-colors duration-200 ${
+                          pathname === item.path
+                            ? "text-[#00C58E] font-semibold"
+                            : "text-[#374151]"
+                        }`}
                       >
                         {item.title}
-                      </span>
-                    </Link>
+                      </Link>
+                    )}
                   </motion.li>
                 ))}
               </ul>

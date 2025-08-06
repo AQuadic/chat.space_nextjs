@@ -4,6 +4,7 @@ import Testimonials from '../general/Testimonials'
 import DiscoverMore from '../general/DiscoverMore'
 import SolutionHero from './SolutionHero'
 import SolutionCapabilities from './SolutionCapabilities'
+import SolutionTitle from './SolutionTitle'
 
 const MainSolution = () => {
     return (
@@ -11,6 +12,7 @@ const MainSolution = () => {
             <SolutionHero />
             <SolutionBrands />
             <SolutionCapabilities />
+            <SolutionTitle />
             <Testimonials />
             <DiscoverMore />
         </div>

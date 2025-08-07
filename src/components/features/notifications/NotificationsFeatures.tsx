@@ -34,15 +34,15 @@ const NotificationsFeatures = () => {
                     <Image src={featureBG2} alt='bg' className='absolute top-0 -z-10' width={704} />
                 </div>
                 <div>
-                    <h1 className='text-[#111827] text-[30px] font-semibold font-[Poppins] leading-[100%]'>Update customers and prospects</h1>
+                    <h1 className='text-[#111827] text-[30px] font-semibold font-[Poppins] leading-[100%]'>Offers and promotions</h1>
                     <ul className='mt-9'>
                         <li className='flex items-center gap-3'>
                             <SolutionCheck />
-                            <p className='text-[#4B5563] text-base font-normal leading-[150%]'>Alert customers when products are in stock</p>
+                            <p className='text-[#4B5563] text-base font-normal leading-[150%]'>Notify customers of special offers and discounted prices</p>
                         </li>
                         <li className='flex items-center gap-3 mt-4'>
                             <SolutionCheck />
-                            <p className='text-[#4B5563] text-base font-normal leading-[150%]'>Cross-sell based on interests</p>
+                            <p className='text-[#4B5563] text-base font-normal leading-[150%]'>Offer tailored deals to prospects</p>
                         </li>
                     </ul>
                 </div>
@@ -50,15 +50,15 @@ const NotificationsFeatures = () => {
 
             <div className='flex flex-wrap items-center gap-4 justify-between mt-20'>
                 <div>
-                    <h1 className='text-[#111827] text-[30px] font-semibold font-[Poppins] leading-[100%]'>Update customers and prospects</h1>
+                    <h1 className='text-[#111827] text-[30px] font-semibold font-[Poppins] leading-[100%]'>Stronger relationships</h1>
                     <ul className='mt-9'>
                         <li className='flex items-center gap-3'>
                             <SolutionCheck />
-                            <p className='text-[#4B5563] text-base font-normal leading-[150%]'>Alert customers when products are in stock</p>
+                            <p className='text-[#4B5563] text-base font-normal leading-[150%]'>Promote continuity between users and teams</p>
                         </li>
                         <li className='flex items-center gap-3 mt-4'>
                             <SolutionCheck />
-                            <p className='text-[#4B5563] text-base font-normal leading-[150%]'>Cross-sell based on interests</p>
+                            <p className='text-[#4B5563] text-base font-normal leading-[150%]'>Customize alerts to specific teams/messages</p>
                         </li>
                     </ul>
                 </div>

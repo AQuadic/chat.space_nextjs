@@ -1,3 +1,4 @@
+import DiscoverMore from '@/components/general/DiscoverMore'
 import Festivals from '@/components/resources/whatsapp_template/Festivals'
 import UsingTemplatesInWati from '@/components/resources/whatsapp_template/UsingTemplatesInWati'
 import WhatsappHero from '@/components/resources/whatsapp_template/WhatsappHero'
@@ -11,6 +12,7 @@ const page = () => {
             <Festivals />
             <WhyUseWhatsapp />
             <UsingTemplatesInWati />
+            <DiscoverMore />
         </div>
     )
 }

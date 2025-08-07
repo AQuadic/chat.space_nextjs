@@ -13,7 +13,7 @@ const HomeHero = () => {
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
-          className="py-10"
+          className="sm:py-10"
         >
           <h2 className="text-[#2D3E50] text-3xl sm:text-5xl font-semibold leading-[1.2]">
             Connect better. <br />

@@ -58,9 +58,13 @@ const Testimonials = () => {
           {TestimonialsData.map((item, index) => (
             <motion.div
               key={index}
-              className="w-[385px] py-9 bg-[#FFFFFF] rounded-3xl px-[22px] pt-7"
+              className="w-[385px] py-9 bg-[#FFFFFF] rounded-3xl px-[22px] pt-7 transition-all duration-300"
               style={{ boxShadow: "0px 0px 2px 0px #00000040" }}
               variants={cardVariants}
+              whileHover={{
+                scale: 1.04,
+                boxShadow: "0px 8px 24px 0px #00000030",
+              }}
             >
               <Image src={item.rate} alt="rate" width={108} height={24} />
               <Image
@@ -70,7 +74,7 @@ const Testimonials = () => {
                 height={25}
                 className="mt-[18px]"
               />
-              <h2 className="text-[#000000] text-sm font-normal mt-[18px] capitalize leading-[200%]">
+              <h2 className="text-[#000000] text-sm font-normal mt-[18px] h-[140px] capitalize leading-[200%]">
                 &quot;{item.review}&quot;
               </h2>
               <div className="mt-4 flex items-center gap-[14px]">

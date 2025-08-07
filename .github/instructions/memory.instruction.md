@@ -90,3 +90,4 @@ Hover animations added to pricing cards using Framer Motion for scale and shadow
 - Feature implementation: testimonial cards now scale and shadow on hover (Testimonials.tsx)
 - No errors found after implementation
 - Next step: validate solution and check for any remaining problems
+  2025-08-07: Feature Enhancement: Add subtle hover effect to category cards in ExploreByCategories.tsx, in addition to click effect. User wants the hover effect to be slight/subtle, not strong. File in focus: src/components/resources/blogs/ExploreByCategories.tsx. Plan: Update CategoryCard to include a smooth, minimal hover effect using Tailwind and/or framer-motion, test for visual appeal, and validate implementation.

@@ -39,10 +39,11 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
 }) => {
   return (
     <div
-      className={`w-[302px] h-20 border rounded-[10px] flex items-center gap-3 p-5 cursor-pointer 
+      className={`w-[302px] h-20 border rounded-[10px] flex items-center gap-3 p-5 cursor-pointer transition-all duration-200 
             ${
               isSelected ? "border-[#BBF7D0] bg-[#F0FDF4]" : "border-[#E5E7EB]"
-            }`}
+            } 
+            hover:shadow-md hover:scale-[1.02] hover:border-[#BBF7D0] hover:bg-[#F6FEF9]`}
       onClick={() => onClick(categoryName)}
     >
       <Icon />

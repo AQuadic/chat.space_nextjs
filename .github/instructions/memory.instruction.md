@@ -64,10 +64,10 @@ Hover animations added to pricing cards using Framer Motion for scale and shadow
 
 ## Current Task (2025-08-07)
 
-- Feature Enhancement: Chevron now rotates to 180° (up) when open, 0° (down) when closed, in both desktop and mobile navs
+- Feature Enhancement: Logo in header is now a link to the home page on both desktop and mobile
 - File: src/components/layout/Header.tsx
-- Status: Chevron rotation updated, no errors found
-- Plan: Validate animation visually, update memory and todo list after confirmation
+- Status: Logo link enhancement implemented, no errors found
+- Plan: Validate navigation visually, update memory and todo list after confirmation
 ```
 
 ## Conversation History

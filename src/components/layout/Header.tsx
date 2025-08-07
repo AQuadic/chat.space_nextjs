@@ -2,7 +2,7 @@
 
 import { NavLinks } from "@/constants/NavLinks";
 import Image from "next/image";
-import React, { useState,useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -17,7 +17,9 @@ const Header = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const pathname = usePathname();
   const dropdownRef = useRef<HTMLDivElement>(null);
-const [activeMobileDropdown, setActiveMobileDropdown] = useState<string | null>(null);
+  const [activeMobileDropdown, setActiveMobileDropdown] = useState<
+    string | null
+  >(null);
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
@@ -27,7 +29,7 @@ const [activeMobileDropdown, setActiveMobileDropdown] = useState<string | null>(
     setIsSidebarOpen(false);
   };
 
-   const overlayVariants = {
+  const overlayVariants = {
     closed: {
       opacity: 0,
       transition: {
@@ -95,12 +97,14 @@ const [activeMobileDropdown, setActiveMobileDropdown] = useState<string | null>(
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <Image
-            src="/images/header/logo.svg"
-            alt="logo"
-            width={177.8}
-            height={36.5}
-          />
+          <Link href="/" aria-label="Home">
+            <Image
+              src="/images/header/logo.svg"
+              alt="logo"
+              width={177.8}
+              height={36.5}
+            />
+          </Link>
         </motion.div>
 
         <motion.div
@@ -116,7 +120,8 @@ const [activeMobileDropdown, setActiveMobileDropdown] = useState<string | null>(
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
-              className="relative">
+              className="relative"
+            >
               {item.subLinks ? (
                 <>
                   <button
@@ -130,7 +135,9 @@ const [activeMobileDropdown, setActiveMobileDropdown] = useState<string | null>(
                     {item.title}
                     <motion.span
                       initial={false}
-                      animate={{ rotate: activeDropdown === item.title ? 180 : 0 }}
+                      animate={{
+                        rotate: activeDropdown === item.title ? 180 : 0,
+                      }}
                       transition={{ duration: 0.3 }}
                       className="ml-1"
                     >
@@ -138,37 +145,53 @@ const [activeMobileDropdown, setActiveMobileDropdown] = useState<string | null>(
                     </motion.span>
                   </button>
 
-                <AnimatePresence>
-                  {activeDropdown === item.title && (
-                    <motion.div
-                      key="dropdown"
-                      initial={{ opacity: 0, y: -10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -10 }}
-                      transition={{ duration: 0.25 }}
-                      className="absolute top-full -left-20 mt-2 w-72 bg-white shadow-md rounded-xl py-2 z-50"
-                    >
-                      {item.subLinks.map((sub, subIdx) => (
-                        <Link
-                          key={subIdx}
-                          href={sub.path}
-                          onClick={() => setActiveDropdown(null)}
-                          className={`flex items-center gap-2 px-2 py-3 rounded-[8px] mx-4 text-base font-medium transition-all duration-200 ${
-                          pathname === sub.path
-                            ? "bg-[#E6F9F4] text-[#15803D] font-semibold border-l-4 border-[#22C55E] pl-2"
-                            : "text-[#374151] hover:bg-[#E8F5E8] hover:text-[#15803D]"
-                        }`}
-                        >
-                          {subIdx === 0 && <span><Broadcast /></span>}
-                          {subIdx === 1 && <span><SharedTeam /></span>}
-                          {subIdx === 2 && <span><CustomNotifications /></span>}
-                          {subIdx === 3 && <span><Phone /></span>}
-                          <span>{sub.title}</span>
-                        </Link>
-                      ))}
-                    </motion.div>
-                  )}
-                </AnimatePresence>
+                  <AnimatePresence>
+                    {activeDropdown === item.title && (
+                      <motion.div
+                        key="dropdown"
+                        initial={{ opacity: 0, y: -10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -10 }}
+                        transition={{ duration: 0.25 }}
+                        className="absolute top-full -left-20 mt-2 w-72 bg-white shadow-md rounded-xl py-2 z-50"
+                      >
+                        {item.subLinks.map((sub, subIdx) => (
+                          <Link
+                            key={subIdx}
+                            href={sub.path}
+                            onClick={() => setActiveDropdown(null)}
+                            className={`flex items-center gap-2 px-2 py-3 rounded-[8px] mx-4 text-base font-medium transition-all duration-200 ${
+                              pathname === sub.path
+                                ? "bg-[#E6F9F4] text-[#15803D] font-semibold border-l-4 border-[#22C55E] pl-2"
+                                : "text-[#374151] hover:bg-[#E8F5E8] hover:text-[#15803D]"
+                            }`}
+                          >
+                            {subIdx === 0 && (
+                              <span>
+                                <Broadcast />
+                              </span>
+                            )}
+                            {subIdx === 1 && (
+                              <span>
+                                <SharedTeam />
+                              </span>
+                            )}
+                            {subIdx === 2 && (
+                              <span>
+                                <CustomNotifications />
+                              </span>
+                            )}
+                            {subIdx === 3 && (
+                              <span>
+                                <Phone />
+                              </span>
+                            )}
+                            <span>{sub.title}</span>
+                          </Link>
+                        ))}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
                 </>
               ) : (
                 <Link
@@ -256,12 +279,14 @@ const [activeMobileDropdown, setActiveMobileDropdown] = useState<string | null>(
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
             >
-              <Image
-                src="/images/header/logo.svg"
-                alt="logo"
-                width={140}
-                height={28}
-              />
+              <Link href="/" aria-label="Home">
+                <Image
+                  src="/images/header/logo.svg"
+                  alt="logo"
+                  width={140}
+                  height={28}
+                />
+              </Link>
               <motion.button
                 onClick={closeSidebar}
                 className="w-8 h-8 flex items-center justify-center text-gray-500 hover:text-gray-700"
@@ -305,7 +330,9 @@ const [activeMobileDropdown, setActiveMobileDropdown] = useState<string | null>(
                         <button
                           onClick={() =>
                             setActiveMobileDropdown(
-                              activeMobileDropdown === item.title ? null : item.title
+                              activeMobileDropdown === item.title
+                                ? null
+                                : item.title
                             )
                           }
                           className={`flex justify-between items-center w-full text-base font-normal py-3 px-2 rounded-md transition-colors duration-200 ${
@@ -318,7 +345,10 @@ const [activeMobileDropdown, setActiveMobileDropdown] = useState<string | null>(
                             {item.title}
                             <motion.span
                               initial={false}
-                              animate={{ rotate: activeMobileDropdown === item.title ? 180 : 0 }}
+                              animate={{
+                                rotate:
+                                  activeMobileDropdown === item.title ? 180 : 0,
+                              }}
                               transition={{ duration: 0.3 }}
                               className="ml-1"
                             >
@@ -327,7 +357,9 @@ const [activeMobileDropdown, setActiveMobileDropdown] = useState<string | null>(
                           </span>
                           <svg
                             className={`w-4 h-4 transform transition-transform duration-300 ${
-                              activeMobileDropdown === item.title ? "rotate-90" : ""
+                              activeMobileDropdown === item.title
+                                ? "rotate-90"
+                                : ""
                             }`}
                             fill="none"
                             stroke="currentColor"

@@ -72,7 +72,7 @@ const ExploreByCategories: React.FC = () => {
         Explore by Category
       </h2>
 
-      <div className="mt-10 grid md:grid-cols-2 gap-6">
+      <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
         <Image
           src="/images/resources/explorebycategory.png"
           alt="Explore categories image"
@@ -80,7 +80,7 @@ const ExploreByCategories: React.FC = () => {
           height={398}
         />
 
-        <div className="grid gap-5 w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 w-full">
           <CategoryCard
             icon={AllIcon}
             title="All"

@@ -28,6 +28,7 @@ applyTo: "**"
 - Button always at the bottom using flex
 - 'use client' directive required for animated client components
 - Animate HomeImpact section and cards using Framer Motion entrance and stagger effects
+- Mobile-friendly flex and centering classes applied to HomeFeatures sections (Broadcast, Chatbots, sharedTeam) for consistent responsive layout. Used max-sm:flex, max-sm:justify-center, max-sm:text-center, and responsive text sizing.
 
 ```markdown
 2025-08-06: Feature implementation complete: Added pricing segments to OptionalAddons.tsx matching the provided image. Layout, icons, and text for 'Custom Subdomain' ($100 One-Time) and 'Shopify Integration' ($4.99/Month) implemented using Framer Motion, Tailwind, and custom icons. Design validated visually for pixel-perfect match. Responsiveness and hover animation tested and confirmed. Unused imports removed for code cleanliness. All steps checked off in todo list.
@@ -70,6 +71,7 @@ Hover animations added to pricing cards using Framer Motion for scale and shadow
 ## Conversation History
 
 - 2025-08-07: Added hover animation to HomeImpact cards using framer-motion. Used scale, shadow, and y translation for smooth effect. Updated transition for responsiveness and visual appeal.
+- 2025-08-07: Mobile UI enhancement applied to HomeFeatures. Matched first section's mobile fix for Chatbots and sharedTeam sections: added max-sm:flex, max-sm:justify-center, max-sm:text-center, and responsive text sizing to ensure consistent mobile layout. All buttons centered and feature blocks visually aligned for small screens. Proceeding to test and validate responsiveness.
 
 ## Notes
 

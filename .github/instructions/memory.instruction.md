@@ -26,11 +26,17 @@ applyTo: "**"
 - Inline style for custom box-shadow
 - Framer Motion for card animation
 - Button always at the bottom using flex
+- 'use client' directive required for animated client components
+- Animate HomeImpact section and cards using Framer Motion entrance and stagger effects
 
 ```markdown
 2025-08-06: Feature implementation complete: Added pricing segments to OptionalAddons.tsx matching the provided image. Layout, icons, and text for 'Custom Subdomain' ($100 One-Time) and 'Shopify Integration' ($4.99/Month) implemented using Framer Motion, Tailwind, and custom icons. Design validated visually for pixel-perfect match. Responsiveness and hover animation tested and confirmed. Unused imports removed for code cleanliness. All steps checked off in todo list.
 
+2025-08-07: Framer Motion planned for HomeImpact section animation. Will use motion.div for section and cards, staggered entrance, fade/slide effect. 'use client' directive required for Next.js client-side rendering. Will check for Framer Motion dependency and install if missing.
+
 ## Context7 Research History
+
+2025-08-07: Framer Motion planned for HomeImpact section animation. Will use motion.div for section and cards, staggered entrance, fade/slide effect. 'use client' directive required for Next.js client-side rendering. Will check for Framer Motion dependency and install if missing.
 
 2025-08-06: Inter font integration completed. Added Inter import to globals.css, updated tailwind.config.js to include fontFamily.inter, and fixed ESM import. font-inter utility now available for use in Tailwind classes.
 
@@ -45,11 +51,10 @@ Hover animations added to pricing cards using Framer Motion for scale and shadow
 2025-08-06: User requested to make PayPerConversation section responsive and add Framer Motion animations. Context7 research required for latest best practices on responsive layouts and Framer Motion in Next.js/React.
 2025-08-06: User requested to add Inter font as font-inter in Tailwind. Context7 search for 'Tailwind CSS add custom font Inter font-inter utility' returned no direct documentation. Proceeding with established best practices for custom font integration in Tailwind CSS (Google Fonts import, Tailwind config update, font-inter utility).
 
-## Current Task (2025-08-06)
+## Current Task (2025-08-07)
 
-- Component: AdditionalSessions.tsx
-- Goal: Update first card to match provided image - "Chatbot Sessions" with interactive slider
-- Requirements: Slider for session count (1K-10K), dynamic pricing calculation ($140/1000 sessions)
-- Keep second card (Shopify Integration) unchanged
-- Background already added to first card, need content and slider functionality
+- Component: HomeImpact.tsx
+- Goal: Animate HomeImpact section and cards using Framer Motion
+- Requirements: Add 'use client' directive, entrance animation for section, staggered fade/slide for cards
+- Workflow: Update memory, check/install Framer Motion, edit HomeImpact.tsx, test animation
 ```

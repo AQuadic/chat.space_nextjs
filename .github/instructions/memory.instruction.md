@@ -20,6 +20,9 @@ applyTo: "**"
 
 ## Coding Patterns
 
+2025-08-07: Bug fix applied: Replaced font-[Poppins] with font-poppins utility in ExploreByCategories.tsx. This ensures Poppins uses proper sans-serif fallback and loads correctly via Tailwind config. Will validate font rendering and update memory after confirmation.
+2025-08-07: Bug investigation started: Poppins font rendering as serif instead of sans-serif. Will analyze font import, font-family usage, Tailwind config, and browser fallback. Will update memory after root cause is found and fixed.
+
 - Data-driven rendering for pricing cards
 - Responsive design using Tailwind breakpoints
 - Custom icons for feature lists
@@ -42,6 +45,8 @@ applyTo: "**"
 2025-08-07: Added hover animation to HomeImpact cards using framer-motion. Used scale, shadow, and y translation for smooth effect. Updated transition for responsiveness and visual appeal.
 
 2025-08-07: Added hover animation to testimonial cards in Testimonials.tsx using framer-motion's whileHover for scale and shadow. No errors found after implementation. Feature validated visually and matches requirements.
+
+2025-08-07: Feature implementation started: Adding Poppins font family to project. Will update globals.css to import Poppins and update font-family usage. Will validate font application and update memory after completion.
 
 ## Context7 Research History
 

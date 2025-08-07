@@ -1,31 +1,68 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import React from 'react';
-import Marquee from 'react-fast-marquee';
+import Image from "next/image";
+import React from "react";
+import Marquee from "react-fast-marquee";
 
 const TrustedBrands = () => {
-    return (
-        <section className="container flex flex-col items-center py-12">
-        <h2 className="text-[#000000] text-4xl font-semibold leading-[100%] font-Poppins">
-            Trusted by 10,000+ Businesses Worldwide
-        </h2>
-        <p className="text-[#5A5A5A] text-xl font-normal leading-[150%] mt-2.5 text-center">
-            From startups to Fortune 500 companies, businesses trust Chati Space to power <br /> their customer communications
-        </p>
+  return (
+    <section className="container flex flex-col items-center py-12">
+      <h2 className="text-[#000000] text-2xl sm:text-4xl text-center font-semibold leading-[120%] font-Poppins">
+        Trusted by 10,000+ Businesses Worldwide
+      </h2>
+      <p className="text-[#5A5A5A] text-lg sm:text-xl font-normal leading-[150%] mt-2.5 text-center">
+        From startups to Fortune 500 companies, businesses trust Chati Space to
+        power <br /> their customer communications
+      </p>
 
-        <div className="w-full mt-16 overflow-hidden">
-            <Marquee gradient={false} speed={50} pauseOnHover={true}>
-            <Image src="/images/home/Visa.svg" width={120} height={120} alt="Visa" className="mx-10" />
-            <Image src="/images/home/huawei.svg" width={112} height={103} alt="Huawei" className="mx-10" />
-            <Image src="/images/home/amazon.svg" width={173} height={53} alt="Amazon" className="mx-10" />
-            <Image src="/images/home/shopify.svg" width={213} height={91} alt="Shopify" className="mx-10" />
-            <Image src="/images/home/mercedes.svg" width={150} height={134} alt="Mercedes" className="mx-10" />
-            <Image src="/images/home/bmw.svg" width={103} height={104} alt="BMW" className="mx-10" />
-            </Marquee>
-        </div>
-        </section>
-    );
+      <div className="w-full mt-16 overflow-hidden">
+        <Marquee gradient={false} speed={50} pauseOnHover={true}>
+          <Image
+            src="/images/home/Visa.svg"
+            width={120}
+            height={120}
+            alt="Visa"
+            className="mx-5 sm:mx-10 max-sm:w-[60px]"
+          />
+          <Image
+            src="/images/home/huawei.svg"
+            width={112}
+            height={103}
+            alt="Huawei"
+            className="mx-5 sm:mx-10 max-sm:w-[60px]"
+          />
+          <Image
+            src="/images/home/amazon.svg"
+            width={173}
+            height={53}
+            alt="Amazon"
+            className="mx-5 sm:mx-10 max-sm:w-[80px]"
+          />
+          <Image
+            src="/images/home/shopify.svg"
+            width={213}
+            height={91}
+            alt="Shopify"
+            className="mx-5 sm:mx-10 max-sm:w-[100px]"
+          />
+          <Image
+            src="/images/home/mercedes.svg"
+            width={150}
+            height={134}
+            alt="Mercedes"
+            className="mx-5 sm:mx-10 max-sm:w-[90px]"
+          />
+          <Image
+            src="/images/home/bmw.svg"
+            width={103}
+            height={104}
+            alt="BMW"
+            className="mx-5 sm:mx-10 max-sm:w-[60px]"
+          />
+        </Marquee>
+      </div>
+    </section>
+  );
 };
 
 export default TrustedBrands;

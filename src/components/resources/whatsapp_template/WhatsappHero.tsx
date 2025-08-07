@@ -12,7 +12,7 @@ const WhatsappHero = () => {
     };
 
     return (
-        <section className='container flex md:flex-row flex-col justify-between gap-8 xl:gap-0 pt-[50px] pb-8'>
+        <section className='container flex flex-wrap justify-between gap-8 xl:gap-0 pt-[50px] pb-8'>
             <div>
                 <h1 className='text-[#111827] md:text-5xl text-4xl font-semibold leading-[1.2] capitalize'>
                     Festive Messaging <br />Made Easier!<br />
@@ -102,13 +102,13 @@ const WhatsappHero = () => {
                 </div>
             </div>
             <div className='relative'>
-                <Image src='/images/solution/solutionHero.png' alt='hero' width={588} height={392} className='z-10' />
+                <Image src='/images/resources/whatsapTemhero.png' alt='hero' width={588} height={392} className='z-10' />
                 <Image
                     src='/images/solution/blueFrame.png'
                     alt='blue frame'
                     width={572}
                     height={394}
-                    className='md:block hidden absolute top-8 left-12 -z-10'
+                    className='md:block hidden absolute top-1 left-14 -z-10'
                 />
             </div>
         </section>

@@ -70,7 +70,7 @@ const Testimonials = () => {
                 height={25}
                 className="mt-[18px]"
               />
-              <h2 className="text-[#000000] text-sm font-normal mt-[18px] capitalize leading-[200%]">
+              <h2 className="text-[#000000] text-sm font-normal mt-[18px] h-[140px] capitalize leading-[200%]">
                 &quot;{item.review}&quot;
               </h2>
               <div className="mt-4 flex items-center gap-[14px]">

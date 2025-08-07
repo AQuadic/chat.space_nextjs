@@ -1,7 +1,10 @@
 import React from "react";
+import NotificationsHeader from "./NotificationsHeader";
 
 const MainNotifications = () => {
-  return <div>helo</div>;
+  return <div>
+    <NotificationsHeader />
+  </div>;
 };
 
 export default MainNotifications;

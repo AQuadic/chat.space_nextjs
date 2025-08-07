@@ -39,7 +39,7 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
 }) => {
   return (
     <div
-      className={`w-[302px] h-20 border rounded-[10px] flex items-center gap-3 p-5 cursor-pointer transition-all duration-200 
+      className={`w-full sm:w-[302px] h-20 border rounded-[10px] flex items-center gap-3 p-5 cursor-pointer transition-all duration-200 
             ${
               isSelected ? "border-[#BBF7D0] bg-[#F0FDF4]" : "border-[#E5E7EB]"
             } 
@@ -72,7 +72,7 @@ const ExploreByCategories: React.FC = () => {
         Explore by Category
       </h2>
 
-      <div className="mt-10 flex flex-wrap gap-6">
+      <div className="mt-10 grid md:grid-cols-2 gap-6">
         <Image
           src="/images/resources/explorebycategory.png"
           alt="Explore categories image"
@@ -80,7 +80,7 @@ const ExploreByCategories: React.FC = () => {
           height={398}
         />
 
-        <div className="grid md:grid-cols-2 gap-5">
+        <div className="grid gap-5 w-full">
           <CategoryCard
             icon={AllIcon}
             title="All"

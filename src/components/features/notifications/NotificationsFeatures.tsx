@@ -1,9 +1,6 @@
 import SolutionCheck from '@/components/icons/solution/SolutionCheck'
 import Image from 'next/image'
 import React from 'react'
-import featureBG1 from '../../../../public/images/features/featureBG1.png'
-import featureBG2 from '../../../../public/images/features/featureBG2.png'
-import featureBG3 from '../../../../public/images/features/featureBG3.png'
 
 const NotificationsFeatures = () => {
     return (
@@ -22,16 +19,14 @@ const NotificationsFeatures = () => {
                         </li>
                     </ul>
                 </div>
-                <div className='relative'>
+                <div className=''>
                     <Image src='/images/features/notificationfeature1.png' alt='image' width={557} height={370} className='z-10' />
-                    <Image src={featureBG1} alt='bg' className='absolute top-0' width={704} />
                 </div>
             </div>
 
             <div className='flex flex-wrap items-center gap-4 justify-between mt-20'>
-                <div className='relative'>
+                <div className=''>
                     <Image src='/images/features/notificationfeature2.png' alt='image' width={592} height={320} className='z-10' />
-                    <Image src={featureBG2} alt='bg' className='absolute top-0 -z-10' width={704} />
                 </div>
                 <div>
                     <h1 className='text-[#111827] text-[30px] font-semibold font-[Poppins] leading-[100%]'>Offers and promotions</h1>
@@ -62,9 +57,8 @@ const NotificationsFeatures = () => {
                         </li>
                     </ul>
                 </div>
-                <div className='relative'>
+                <div className=''>
                     <Image src='/images/features/notificationfeature3.png' alt='image' width={544} height={343} className='z-10' />
-                    <Image src={featureBG3} alt='bg' className='absolute top-0' width={704} />
                 </div>
             </div>
         </section>

@@ -58,9 +58,13 @@ const Testimonials = () => {
           {TestimonialsData.map((item, index) => (
             <motion.div
               key={index}
-              className="w-[385px] py-9 bg-[#FFFFFF] rounded-3xl px-[22px] pt-7"
+              className="w-[385px] py-9 bg-[#FFFFFF] rounded-3xl px-[22px] pt-7 transition-all duration-300"
               style={{ boxShadow: "0px 0px 2px 0px #00000040" }}
               variants={cardVariants}
+              whileHover={{
+                scale: 1.04,
+                boxShadow: "0px 8px 24px 0px #00000030",
+              }}
             >
               <Image src={item.rate} alt="rate" width={108} height={24} />
               <Image

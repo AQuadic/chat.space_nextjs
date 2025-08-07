@@ -20,6 +20,10 @@ applyTo: "**"
 
 ## Coding Patterns
 
+2025-08-07: Feature implementation started: Adding Framer Motion animation to SharedTeamHero section. Will use motion.div for section and key blocks, entrance fade/slide effect, staggered animation for child elements. 'use client' directive required for Next.js client-side rendering. Will validate animation and update memory after completion.
+2025-08-07: Bug fix applied: Replaced font-[Poppins] with font-poppins utility in ExploreByCategories.tsx. This ensures Poppins uses proper sans-serif fallback and loads correctly via Tailwind config. Will validate font rendering and update memory after confirmation.
+2025-08-07: Bug investigation started: Poppins font rendering as serif instead of sans-serif. Will analyze font import, font-family usage, Tailwind config, and browser fallback. Will update memory after root cause is found and fixed.
+
 - Data-driven rendering for pricing cards
 - Responsive design using Tailwind breakpoints
 - Custom icons for feature lists
@@ -43,14 +47,14 @@ applyTo: "**"
 
 2025-08-07: Added hover animation to testimonial cards in Testimonials.tsx using framer-motion's whileHover for scale and shadow. No errors found after implementation. Feature validated visually and matches requirements.
 
+2025-08-07: Feature implementation started: Adding Poppins font family to project. Will update globals.css to import Poppins and update font-family usage. Will validate font application and update memory after completion.
+
 ## Context7 Research History
 
+2025-08-07: Framer Motion animation planned for SharedTeamHero section. Will use motion.div for section and key blocks, entrance fade/slide effect, staggered animation for child elements. 'use client' directive required for Next.js client-side rendering. Will validate animation and update memory after completion.
 2025-08-07: Framer Motion planned for HomeImpact section animation. Will use motion.div for section and cards, staggered entrance, fade/slide effect. 'use client' directive required for Next.js client-side rendering. Will check for Framer Motion dependency and install if missing.
-
 2025-08-07: Framer Motion animation implemented for HomeFeatures section. Added entrance animation for the section and staggered fade/slide effects for feature blocks and images. 'use client' directive included for client-side rendering. Animation tested and confirmed for functionality and performance.
-
 2025-08-06: Inter font integration completed. Added Inter import to globals.css, updated tailwind.config.js to include fontFamily.inter, and fixed ESM import. font-inter utility now available for use in Tailwind classes.
-
 2025-08-06: Bug fix applied to PayPerConversation.tsx. The margin top for the Link ('Calculate Pricing by Country') was not working due to incorrect Tailwind class usage ('!mt-12'). Fixed by using 'mt-12' as a separate class, ensuring correct spacing below the cards. Visual result validated.
 
 No Context7 research performed yet for pricing card width; all changes based on user design and direct feedback
@@ -78,6 +82,8 @@ Hover animations added to pricing cards using Framer Motion for scale and shadow
 
 2025-08-07: Framer Motion animation implemented for TrendingBlogs section. Used motion.section and motion.div for entrance and staggered fade/slide effects on blog cards. Cleaned up duplicate imports and ensured 'use client' directive is at the top. No errors found after implementation. Animation tested and confirmed for functionality and performance.
 
+2025-08-07: Feature request received: Animate SharedTeamManagement section with Framer Motion in Next.js. Will use motion.div for section and key blocks, entrance fade/slide effect, staggered animation for child elements. Will validate animation and update memory after completion.
+
 ## Notes
 
 - Always use framer-motion for UI animation
@@ -85,3 +91,12 @@ Hover animations added to pricing cards using Framer Motion for scale and shadow
 - Feature implementation: testimonial cards now scale and shadow on hover (Testimonials.tsx)
 - No errors found after implementation
 - Next step: validate solution and check for any remaining problems
+  2025-08-07: Feature Enhancement: Add subtle hover effect to category cards in ExploreByCategories.tsx, in addition to click effect. User wants the hover effect to be slight/subtle, not strong. File in focus: src/components/resources/blogs/ExploreByCategories.tsx. Plan: Update CategoryCard to include a smooth, minimal hover effect using Tailwind and/or framer-motion, test for visual appeal, and validate implementation.
+
+## Current Task (2025-08-07)
+
+2025-08-07: Feature Implementation & Enhancement: RecentBlogs section overflow-x fixed and Framer Motion entrance/hover animations added to blog cards. File: src/components/resources/blogs/RecentBlogs.tsx. All steps completed: Context7 research, code analysis, overflow fix, animation integration, testing, debugging, and validation. No errors found, solution matches requirements, and code is production-ready.
+
+2025-08-07: Framer Motion animation implemented for SharedTeamManagement section. Used motion.section and motion.div for entrance and staggered fade/slide effects. Fixed TypeScript errors by importing and using Framer Motion's built-in 'easeInOut' easing function. No errors found after implementation. Animation tested and confirmed for functionality and performance.
+
+2025-08-07: Enhancement complete: SharedTeamManagement section and child blocks now animate on scroll using Framer Motion's whileInView and viewport props. Animation triggers smoothly as each block enters the viewport. No errors found after implementation. Solution validated and production-ready.

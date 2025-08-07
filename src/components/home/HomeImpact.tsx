@@ -33,7 +33,7 @@ const HomeImpact = () => {
     >
       <div className="container flex flex-col items-center">
         <motion.h1
-          className="text-[#000000] text-4xl font-semibold !font-Poppins text-center"
+          className="text-[#000000] text-2xl sm:text-4xl font-semibold !font-Poppins text-center"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
@@ -41,7 +41,7 @@ const HomeImpact = () => {
           Real Impact. Real Results.
         </motion.h1>
         <motion.p
-          className="text-[#5A5A5A] text-xl leading-[150%] mt-2 text-center"
+          className="text-[#5A5A5A] text-lg sm:text-xl leading-[150%] mt-2 text-center"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
@@ -61,10 +61,16 @@ const HomeImpact = () => {
               style={{ boxShadow: "1px 1px 2px 0px #00000040" }}
               variants={cardVariants}
               whileHover={{
-                scale: 1.04,
-                boxShadow: "2px 4px 12px 0px #6AC19233",
+                scale: 1.08,
+                boxShadow: "0px 8px 24px 0px #6AC19233",
+                y: -8,
               }}
-              transition={{ type: "spring", stiffness: 300, damping: 20 }}
+              transition={{
+                type: "spring",
+                stiffness: 260,
+                damping: 18,
+                duration: 0.35,
+              }}
             >
               <div className="flex items-center gap-2">
                 <item.icon />

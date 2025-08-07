@@ -10,13 +10,14 @@ applyTo: "**"
 - Code style preferences: prettier
 - Development environment: vs code
 - Communication style: concise, clear explanations
+- UI preferences: modern, animated, interactive (Framer Motion)
 
 ## Project Context
 
 - Current project type: web app
-- Tech stack: Next.js, React, TypeScript, Tailwind CSS, Framer Motion
-- Architecture patterns: component-based, data-driven UI
-- Key requirements: pixel-perfect UI, responsive design, animation, custom theming
+- Tech stack: Next.js, React, TypeScript, Tailwind CSS, Framer Motion (to be added/used)
+- Architecture patterns: component-based
+- Key requirements: performance, scalability, modern UI, animation
 
 ## Coding Patterns
 
@@ -103,3 +104,5 @@ Hover animations added to pricing cards using Framer Motion for scale and shadow
 
 2025-08-07: UI enhancement started: Centering text on mobile in SolutionBrands.tsx. Will use Tailwind responsive text alignment classes (max-sm:text-center) for <h2> and <p> elements. Will validate on mobile and update memory after completion.
 2025-08-07: UI enhancement complete: Centered <h2> and <p> text on mobile in SolutionBrands.tsx using max-sm:text-center Tailwind classes. No errors found after implementation. Visual result validated and memory updated.
+
+2025-08-07: Feature implementation started: Animate SolutionCapabilities section with Framer Motion, add cool hover animation to cards. Will use motion.section for entrance animation, motion.div for cards, staggered child animation, and whileHover for scale/shadow effect. 'use client' directive required for Next.js client-side rendering. Will validate animation and update memory after completion.

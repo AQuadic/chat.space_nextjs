@@ -64,10 +64,10 @@ Hover animations added to pricing cards using Framer Motion for scale and shadow
 
 ## Current Task (2025-08-07)
 
-- Feature Implementation & Code Enhancement: Make Marquee in HomeIntegrations.tsx responsive with smaller images on mobile
-- File: src/components/home/HomeIntegrations.tsx
-- Status: Initial implementation pending
-- Plan: Use Tailwind CSS responsive classes to adjust image size for mobile, test on various screen sizes, update memory and todo list after each step
+- Feature Enhancement: Chevron now rotates to 180° (up) when open, 0° (down) when closed, in both desktop and mobile navs
+- File: src/components/layout/Header.tsx
+- Status: Chevron rotation updated, no errors found
+- Plan: Validate animation visually, update memory and todo list after confirmation
 ```
 
 ## Conversation History

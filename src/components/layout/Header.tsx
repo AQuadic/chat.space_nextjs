@@ -10,6 +10,7 @@ import Broadcast from "../icons/header/Broadcast";
 import SharedTeam from "../icons/header/SharedTeam";
 import CustomNotifications from "../icons/header/CustomNotifications";
 import Phone from "../icons/header/Phone";
+import { ChevronDown } from "lucide-react";
 
 const Header = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -124,9 +125,17 @@ const [activeMobileDropdown, setActiveMobileDropdown] = useState<string | null>(
                       pathname.startsWith(item.path)
                         ? "text-[#00C58E] font-semibold"
                         : "text-[#374151]"
-                    }`}
+                    } flex items-center gap-2`}
                   >
                     {item.title}
+                    <motion.span
+                      initial={false}
+                      animate={{ rotate: activeDropdown === item.title ? 180 : 0 }}
+                      transition={{ duration: 0.3 }}
+                      className="ml-1"
+                    >
+                      <ChevronDown size={18} />
+                    </motion.span>
                   </button>
 
                 <AnimatePresence>
@@ -305,7 +314,17 @@ const [activeMobileDropdown, setActiveMobileDropdown] = useState<string | null>(
                               : "text-[#374151]"
                           }`}
                         >
-                          <span>{item.title}</span>
+                          <span className="flex items-center gap-2">
+                            {item.title}
+                            <motion.span
+                              initial={false}
+                              animate={{ rotate: activeMobileDropdown === item.title ? 180 : 0 }}
+                              transition={{ duration: 0.3 }}
+                              className="ml-1"
+                            >
+                              <ChevronDown size={18} />
+                            </motion.span>
+                          </span>
                           <svg
                             className={`w-4 h-4 transform transition-transform duration-300 ${
                               activeMobileDropdown === item.title ? "rotate-90" : ""

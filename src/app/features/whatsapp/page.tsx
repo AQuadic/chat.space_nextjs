@@ -1,4 +1,5 @@
 import WhatsappCapabilities from '@/components/features/whatsapp/WhatsappCapabilities'
+import WhatsappFeatures from '@/components/features/whatsapp/WhatsappFeatures'
 import WhatsappHeader from '@/components/features/whatsapp/WhatsappHeader'
 import WhatsappTitle from '@/components/features/whatsapp/WhatsappTitle'
 import DiscoverMore from '@/components/general/DiscoverMore'
@@ -11,6 +12,7 @@ const page = () => {
             <WhatsappHeader />
             <WhatsappCapabilities />
             <WhatsappTitle />
+            <WhatsappFeatures />
             <Testimonials />
             <DiscoverMore />
         </div>

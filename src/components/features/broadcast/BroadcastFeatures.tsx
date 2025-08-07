@@ -39,7 +39,7 @@ const BroadcastFeatures = () => {
       variants={fadeInUp}
     >
       <motion.div
-        className="flex lg:flex-row flex-col items-center justify-between mb-8"
+        className="flex lg:flex-row flex-col items-center justify-between mb-8 "
         variants={fadeInUp}
       >
         <motion.div variants={fadeInUp}>
@@ -61,22 +61,19 @@ const BroadcastFeatures = () => {
             </li>
           </ul>
         </motion.div>
-        <motion.div
-          variants={fadeInUp}
-          className="w-full max-sm:w-full max-sm:mt-6"
-        >
+        <motion.div variants={fadeInUp} className="max-sm:w-full max-sm:mt-6">
           <Image
             src={multipleContacts}
             alt="image"
             width={603.2}
             height={394}
-            className="w-full h-auto object-cover max-sm:w-full max-sm:h-auto mx-auto"
+            className="w-full h-auto object-cover max-sm:w-full max-sm:h-auto mx-auto max-w-[519px]"
           />
         </motion.div>
       </motion.div>
 
       <motion.div
-        className="flex lg:flex-row flex-col items-center justify-between mb-8 lg:mt-0 mt-4"
+        className="flex lg:flex-row-reverse flex-col items-center justify-between mb-8 lg:mt-0 mt-4"
         variants={fadeInUp}
       >
         <motion.div variants={fadeInUp}>

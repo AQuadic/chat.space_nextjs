@@ -1,4 +1,5 @@
 import BlogeHero from '@/components/resources/blogs/BlogeHero'
+import ExploreByCategories from '@/components/resources/blogs/ExploreByCategories'
 import TrendingBlogs from '@/components/resources/blogs/TrendingBlogs'
 import React from 'react'
 
@@ -7,6 +8,7 @@ const page = () => {
         <div>
             <BlogeHero />
             <TrendingBlogs />
+            <ExploreByCategories />
         </div>
     )
 }

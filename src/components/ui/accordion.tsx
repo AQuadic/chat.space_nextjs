@@ -12,14 +12,24 @@ function Accordion({
   return <AccordionPrimitive.Root data-slot="accordion" {...props} />;
 }
 
+interface AccordionItemProps
+  extends React.ComponentProps<typeof AccordionPrimitive.Item> {
+  showBorder?: boolean;
+}
+
 function AccordionItem({
   className,
+  showBorder = true,
   ...props
-}: React.ComponentProps<typeof AccordionPrimitive.Item>) {
+}: AccordionItemProps) {
   return (
     <AccordionPrimitive.Item
       data-slot="accordion-item"
-      className={cn("rounded-md border !p-4 mb-4 shadow-sm", className)}
+      className={cn(
+        "rounded-md !p-4",
+        showBorder ? "border mb-4 shadow-sm" : "!border-0 mb-0 !shadow-none",
+        className
+      )}
       {...props}
     />
   );
@@ -35,8 +45,8 @@ function AccordionTrigger({
       <AccordionPrimitive.Trigger
         data-slot="accordion-trigger"
         className={cn(
-          "focus-visible:border-ring focus-visible:ring-ring/50 flex flex-1 items-start justify-between gap-4 rounded-md text-left text-sm font-medium transition-all outline-none hover:underline focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50 [&[data-state=open]>svg]:rotate-180 text-lg font-semibold",
-          className,
+          "focus-visible:border-ring focus-visible:ring-ring/50 flex flex-1 items-start justify-between gap-4 rounded-md text-left text-sm font-medium transition-all outline-none hover:underline focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50 [&[data-state=open]>svg]:rotate-180 sm:text-lg sm:font-semibold",
+          className
         )}
         {...props}
       >

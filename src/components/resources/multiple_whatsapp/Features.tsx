@@ -74,7 +74,7 @@ const Features = () => {
     >
       {/* Feature 1 */}
       <motion.div
-        className="flex flex-wrap items-center justify-between gap-8"
+        className="flex max-sm:flex-col-reverse items-center justify-between gap-8"
         variants={featureVariants}
       >
         <motion.div variants={imageVariants}>
@@ -101,7 +101,7 @@ const Features = () => {
 
       {/* Feature 2 */}
       <motion.div
-        className="flex flex-wrap lg:flex-row flex-col-reverse lg:items-center justify-between gap-8 mt-12 sm:mt-16 md:mt-20"
+        className="flex max-sm:flex-col lg:flex-row flex-col-reverse lg:items-center justify-between gap-8 mt-12 sm:mt-16 md:mt-20"
         variants={featureVariants}
       >
         <motion.div variants={textVariantsRight}>
@@ -128,7 +128,7 @@ const Features = () => {
 
       {/* Feature 3 */}
       <motion.div
-        className="flex flex-wrap items-center justify-between gap-8 mt-12 sm:mt-16 md:mt-20"
+        className="flex max-sm:flex-col-reverse items-center justify-between gap-8 mt-12 sm:mt-16 md:mt-20"
         variants={featureVariants}
       >
         <motion.div variants={imageVariants}>
@@ -155,7 +155,7 @@ const Features = () => {
 
       {/* Feature 4 */}
       <motion.div
-        className="flex flex-wrap lg:flex-row flex-col-reverse lg:items-center justify-between gap-8 mt-12 sm:mt-16 md:mt-20"
+        className="flex max-sm:flex-col lg:flex-row flex-col-reverse lg:items-center justify-between gap-8 mt-12 sm:mt-16 md:mt-20"
         variants={featureVariants}
       >
         <motion.div variants={textVariantsRight}>
@@ -183,7 +183,7 @@ const Features = () => {
 
       {/* Feature 5 */}
       <motion.div
-        className="flex flex-wrap items-center justify-between gap-8 mt-12 sm:mt-16 md:mt-20"
+        className="flex max-sm:flex-col-reverse items-center justify-between gap-8 mt-12 sm:mt-16 md:mt-20"
         variants={featureVariants}
       >
         <motion.div variants={imageVariants}>

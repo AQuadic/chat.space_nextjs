@@ -24,43 +24,48 @@ const childVariants = {
 const WhatsappHeader = () => {
   return (
     <motion.section
-      className="container flex flex-wrap justify-between gap-8 xl:gap-0 pt-[50px] pb-8"
+      className="container flex flex-col md:flex-row items-center justify-between gap-8 xl:gap-0 pt-8 pb-6 md:pt-[50px] md:pb-8"
       variants={sectionVariants}
       initial="hidden"
       animate="visible"
     >
-      <motion.div variants={childVariants}>
+      <motion.div variants={childVariants} className="w-full md:w-1/2">
         <motion.p
           variants={childVariants}
-          className="text-primary-green text-base font-medium leading-[100%] capitalize"
+          className="text-primary-green text-sm md:text-base font-medium leading-[100%] capitalize text-center md:text-left"
         >
           Chati Space for Marketing Agencies
         </motion.p>
         <motion.h1
           variants={childVariants}
-          className="text-[#111827] text-5xl font-semibold mt-2.5 capitalize leading-[1.1]"
+          className="text-[#111827] text-3xl md:text-5xl font-semibold mt-2.5 capitalize leading-tight md:leading-[1.1] text-center md:text-left"
         >
-          Make more effective use <br /> of WhatsApp as a <br /> channel
+          Make more effective use <br className="hidden md:block" /> of WhatsApp
+          as a <br className="hidden md:block" /> channel
         </motion.h1>
         <motion.p
           variants={childVariants}
-          className="text-[#4B5563] text-xl font-normal leading-[150%] mt-8 capitalize"
+          className="text-[#4B5563] text-base md:text-xl font-normal leading-[150%] mt-6 md:mt-8 capitalize text-center md:text-left"
         >
-          Power up lead generation and relationship building on mobile <br />{" "}
-          for your clients
+          Power up lead generation and relationship building on mobile{" "}
+          <br className="hidden md:block" /> for your clients
         </motion.p>
         <motion.div
           variants={childVariants}
-          className="mt-7 flex flex-wrap items-center md:gap-6 gap-2"
+          className="mt-6 md:mt-7 flex flex-col md:flex-row items-center md:items-start md:gap-6 gap-3 justify-center md:justify-start"
         >
-          <motion.div variants={childVariants} className="flex items-center">
+          <motion.div
+            variants={childVariants}
+            className="flex items-center gap-2"
+          >
             <Image
               src="/images/testimonials/rate.png"
               alt="stars"
-              width={90}
-              height={24}
+              width={80}
+              height={22}
+              className="w-20 h-5 object-contain"
             />
-            <p className="text-[#4B5563] text-sm font-normal leading-[200%]">
+            <p className="text-[#4B5563] text-xs md:text-sm font-normal leading-[200%]">
               4.7/5 on G2
             </p>
           </motion.div>
@@ -69,27 +74,33 @@ const WhatsappHeader = () => {
             className="flex items-center gap-2"
           >
             <Credit />
-            <p className="text-[#4B5563] text-sm font-normal leading-[200%]">
+            <p className="text-[#4B5563] text-xs md:text-sm font-normal leading-[200%]">
               No credit card required
             </p>
           </motion.div>
         </motion.div>
       </motion.div>
-      <motion.div variants={childVariants} className="relative">
-        <Image
-          src="/images/features/whatsappHero.png"
-          alt="hero"
-          width={588}
-          height={392}
-          className="z-10"
-        />
-        <Image
-          src="/images/solution/blueFrame.png"
-          alt="blue frame"
-          width={572}
-          height={394}
-          className="md:block hidden absolute top-8 left-12 -z-10"
-        />
+      <motion.div
+        variants={childVariants}
+        className="w-full md:w-1/2 flex items-end justify-center md:justify-end relative mb-8 md:mb-0"
+      >
+        <div className="relative w-[90vw] max-w-[340px] md:max-w-[588px] h-[220px] md:h-[392px] flex items-end">
+          <Image
+            src="/images/features/whatsappHero.png"
+            alt="hero"
+            fill
+            className="z-10 object-contain rounded-xl shadow-lg"
+            sizes="(max-width: 768px) 90vw, 588px"
+            style={{ objectPosition: "bottom" }}
+          />
+          <Image
+            src="/images/solution/blueFrame.png"
+            alt="blue frame"
+            fill
+            className="hidden md:block absolute top-8 left-12 -z-10 object-contain"
+            sizes="588px"
+          />
+        </div>
       </motion.div>
     </motion.section>
   );

@@ -71,6 +71,8 @@ Hover animations added to pricing cards using Framer Motion for scale and shadow
 2025-08-06: User requested to make PayPerConversation section responsive and add Framer Motion animations. Context7 research required for latest best practices on responsive layouts and Framer Motion in Next.js/React.
 2025-08-06: User requested to add Inter font as font-inter in Tailwind. Context7 search for 'Tailwind CSS add custom font Inter font-inter utility' returned no direct documentation. Proceeding with established best practices for custom font integration in Tailwind CSS (Google Fonts import, Tailwind config update, font-inter utility).
 
+2025-08-10: Framer Motion chosen for scroll-triggered animations in WhatsappFeatures.tsx. Rationale: Framer Motion is React-first, lightweight, and offers declarative API for smooth, responsive UI animations. GSAP is more powerful but heavier and less integrated with React. AOS is simple but less flexible. Best practice: Use motion.div for animated blocks, useInView for scroll detection, stagger child animations, and ensure mobile/desktop responsiveness. Will implement Framer Motion scroll-triggered entrance animation for each feature block in WhatsappFeatures.tsx. Memory updated with findings and plan.
+
 ## Current Task (2025-08-07)
 
 - Feature Enhancement: Logo in header is now a link to the home page on both desktop and mobile

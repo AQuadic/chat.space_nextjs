@@ -22,6 +22,7 @@ applyTo: "**"
 ## Coding Patterns
 
 2025-08-10: Enhancement: WhatsappHeader hero image now anchored at the bottom of its section for all screen sizes. Used flex and objectPosition for reliable alignment. No errors found after implementation. Solution validated visually and with error checks.
+2025-08-10: Feature implementation complete: Festivals section refactored for maintainable structure and animated using Framer Motion only. Festival names moved to array, mapped for rendering. Framer Motion's whileInView used for scroll-based animation of each festival item, with staggered delay. No errors found after implementation. Best practice: use motion.div with whileInView for scroll animation, avoid hooks inside map, and keep 'use client' directive for Next.js client components.
 2025-08-10: Feature implementation complete: WhatsappHeader.tsx updated for mobile responsiveness and improved appearance. Used flex-col-reverse for stacking, responsive Tailwind classes for spacing, font sizes, and image handling. Images now use object-contain and fill for better scaling. All changes validated with no errors found. Ready for final review.
 
 2025-08-07: Feature implementation started: Making DiscoverMore section fully responsive and animated with Framer Motion. Will use motion.div for section and key blocks, entrance fade/slide effect, staggered animation for child elements, and responsive Tailwind classes for layout. Will validate animation and responsiveness and update memory after completion.

@@ -1,5 +1,7 @@
+
 "use client";
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 const Festivals = () => {
   const languages = [
@@ -15,6 +17,38 @@ const Festivals = () => {
 
   const handleLanguageSelect = (language: string) => {
     setSelectedLanguage(language);
+  };
+
+  const festivals = [
+    "Gandhi Jayanti",
+    "Navaratri & Dussehra",
+    "Sales",
+    "Cyber Monday",
+    "Thanksgiving",
+    "Black Friday",
+    "Diwali",
+    "Dhanteras",
+    "Republic Day",
+    "Makar Sankranti",
+    "Holi",
+    "Easter",
+    "Women's Day",
+    "Ramadan",
+    "Eid al-Adha",
+    "Independence Day",
+    "Raksha Bandhan",
+    "Janmashtami",
+    "Ganesh Chaturthi",
+    "Brazil Independence",
+    "Ecommerce",
+    "Education",
+    "Healthcare",
+  ];
+
+  // Framer Motion animation variants
+  const itemVariants = {
+    hidden: { opacity: 0, y: 40 },
+    visible: { opacity: 1, y: 0 },
   };
 
   return (
@@ -39,75 +73,19 @@ const Festivals = () => {
         Festivals
       </h1>
       <div className="container mt-9 grid xl:grid-cols-6 md:grid-cols-4 grid-cols-2 gap-4">
-        <div className="lg:w-[192px] h-14 bg-[#FFFFFF] rounded-[12px] flex items-center justify-center font-medium">
-          Gandhi Jayanti
-        </div>
-        <div className="lg:w-[192px] h-14 bg-[#FFFFFF] rounded-[12px] flex items-center justify-center font-medium">
-          Navaratri & Dussehra
-        </div>
-        <div className="lg:w-[192px] h-14 bg-[#FFFFFF] rounded-[12px] flex items-center justify-center font-medium">
-          Sales
-        </div>
-        <div className="lg:w-[192px] h-14 bg-[#FFFFFF] rounded-[12px] flex items-center justify-center font-medium">
-          Cyber Monday
-        </div>
-        <div className="lg:w-[192px] h-14 bg-[#FFFFFF] rounded-[12px] flex items-center justify-center font-medium">
-          Thanksgiving
-        </div>
-        <div className="lg:w-[192px] h-14 bg-[#FFFFFF] rounded-[12px] flex items-center justify-center font-medium">
-          Black Friday
-        </div>
-        <div className="lg:w-[192px] h-14 bg-[#FFFFFF] rounded-[12px] flex items-center justify-center font-medium">
-          Diwali
-        </div>
-        <div className="lg:w-[192px] h-14 bg-[#FFFFFF] rounded-[12px] flex items-center justify-center font-medium">
-          Dhanteras
-        </div>
-        <div className="lg:w-[192px] h-14 bg-[#FFFFFF] rounded-[12px] flex items-center justify-center font-medium">
-          Republic Day
-        </div>
-        <div className="lg:w-[192px] h-14 bg-[#FFFFFF] rounded-[12px] flex items-center justify-center font-medium">
-          Makar Sankranti
-        </div>
-        <div className="lg:w-[192px] h-14 bg-[#FFFFFF] rounded-[12px] flex items-center justify-center font-medium">
-          Holi
-        </div>
-        <div className="lg:w-[192px] h-14 bg-[#FFFFFF] rounded-[12px] flex items-center justify-center font-medium">
-          Easter
-        </div>
-        <div className="lg:w-[192px] h-14 bg-[#FFFFFF] rounded-[12px] flex items-center justify-center font-medium">
-          Women&apos;s Day
-        </div>
-        <div className="lg:w-[192px] h-14 bg-[#FFFFFF] rounded-[12px] flex items-center justify-center font-medium">
-          Ramadan
-        </div>
-        <div className="lg:w-[192px] h-14 bg-[#FFFFFF] rounded-[12px] flex items-center justify-center font-medium">
-          Eid al-Adha
-        </div>
-        <div className="lg:w-[192px] h-14 bg-[#FFFFFF] rounded-[12px] flex items-center justify-center font-medium">
-          Independence Day
-        </div>
-        <div className="lg:w-[192px] h-14 bg-[#FFFFFF] rounded-[12px] flex items-center justify-center font-medium">
-          Raksha Bandhan
-        </div>
-        <div className="lg:w-[192px] h-14 bg-[#FFFFFF] rounded-[12px] flex items-center justify-center font-medium">
-          Janmashtami
-        </div>
-        <div className="lg:w-[192px] h-14 bg-[#FFFFFF] rounded-[12px] flex items-center justify-center font-medium">
-          Ganesh Chaturthi
-        </div>
-        <div className="lg:w-[192px] h-14 bg-[#FFFFFF] rounded-[12px] flex items-center justify-center font-medium">
-          Brazil Independence
-        </div>
-        <div className="lg:w-[192px] h-14 bg-[#FFFFFF] rounded-[12px] flex items-center justify-center font-medium">
-          Ecommerce
-        </div>
-        <div className="lg:w-[192px] h-14 bg-[#FFFFFF] rounded-[12px] flex items-center justify-center font-medium">
-          Education
-        </div>
-        <div className="lg:w-[192px] h-14 bg-[#FFFFFF] rounded-[12px] flex items-center justify-center font-medium">
-          Healthcare
-        </div>
+        {festivals.map((festival, idx) => (
+          <motion.div
+            key={festival}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.15 }}
+            variants={itemVariants}
+            transition={{ duration: 0.5, delay: idx * 0.07 }}
+            className="lg:w-[192px] h-14 bg-[#FFFFFF] rounded-[12px] flex items-center justify-center font-medium"
+          >
+            {festival}
+          </motion.div>
+        ))}
       </div>
     </section>
   );

@@ -66,7 +66,7 @@ const Features = () => {
 
   return (
     <motion.section
-      className="container py-16 sm:py-20 lg:py-24 "
+      className="container py-16 sm:py-12 lg:py-24 "
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.1 }}

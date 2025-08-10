@@ -26,7 +26,10 @@ const WhatsappCapabilities = () => {
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, amount: 0.2 });
   return (
-    <section ref={sectionRef} className="bg-[#F9FAFB] md:p-20 p-4 mt-[106.5px]">
+    <section
+      ref={sectionRef}
+      className="bg-[#F9FAFB] md:p-20 p-4 mt-[50px] sm:mt-[106.5px]"
+    >
       <motion.div
         className="container grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8"
         variants={containerVariants}

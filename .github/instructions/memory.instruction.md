@@ -109,3 +109,8 @@ Hover animations added to pricing cards using Framer Motion for scale and shadow
 
 2025-08-10: Feature implementation started: User requested scroll-based animation for cards in WhyChatiSpace.tsx. Will use Framer Motion's scroll-triggered animation (e.g., useInView or useAnimation) for each card. Will research best practices for scroll-based animation, update card rendering logic, and validate effect. Will update memory after completion.
 2025-08-10: Context7 and official docs researched for framer-motion scroll animation. Best practice: useInView hook tracks when an element enters viewport. For each card, create a ref, use useInView, and trigger animation when isInView is true. Options: once (true for one-time animation), amount (how much of card must be visible), margin (custom detection area). Recommended: animate cards individually as they scroll into view, use stagger for smooth effect. Will implement this pattern in WhyChatiSpace.tsx.
+
+2025-08-10: Feature implementation started: Adding Framer Motion animation to WhatsappHeader section. Will use motion.div for section and key blocks, entrance fade/slide effect, staggered animation for child elements. 'use client' directive required for Next.js client-side rendering. Will validate animation and update memory after completion.
+
+- Animate WhatsappHeader section using Framer Motion
+- Follow Next.js and Framer Motion best practices

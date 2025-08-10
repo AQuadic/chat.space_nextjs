@@ -11,7 +11,10 @@ const MainHome = () => {
   return (
     <div>
       <HomeHero />
-      <TrustedBrands />
+      <TrustedBrands
+        title="Trusted by 10,000+ Businesses Worldwide"
+        description={`From startups to Fortune 500 companies, businesses trust Chati Space to power \n their customer communications`}
+      />
       <HomeImpact />
       <HomeFeatures />
       <WhyChatiSpace />

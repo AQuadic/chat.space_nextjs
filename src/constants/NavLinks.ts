@@ -24,6 +24,7 @@ export const NavLinks = [
       { title: "Blog", path: "/resources/blog" },
       { title: "Whatsapp template", path: "/resources/whatsapp_template" },
       { title: "chatipidia", path: "/resources/chatipidia" },
+      { title: "Multiple WhatsApp Numbers", path: "/resources/multiple_whatsapp" },
     ],
   },
   {

@@ -81,26 +81,23 @@ const WhatsappHeader = () => {
         </motion.div>
       </motion.div>
       <motion.div
+        className="w-full md:w-1/2 relative flex items-center justify-center mb-8 md:mb-0"
         variants={childVariants}
-        className="w-full md:w-1/2 flex items-end justify-center md:justify-end relative mb-8 md:mb-0"
       >
-        <div className="relative w-[90vw] max-w-[340px] md:max-w-[588px] h-[220px] md:h-[392px] flex items-end">
-          <Image
-            src="/images/features/whatsappHero.png"
-            alt="hero"
-            fill
-            className="z-10 object-contain rounded-xl shadow-lg"
-            sizes="(max-width: 768px) 90vw, 588px"
-            style={{ objectPosition: "bottom" }}
-          />
-          <Image
-            src="/images/solution/blueFrame.png"
-            alt="blue frame"
-            fill
-            className="hidden md:block absolute top-8 left-12 -z-10 object-contain"
-            sizes="588px"
-          />
-        </div>
+        <Image
+          src="/images/resources/whatsapTemhero.png"
+          alt="hero"
+          width={588}
+          height={392}
+          className="z-10 w-full max-w-[400px] md:max-w-[588px] h-auto mx-auto"
+        />
+        <Image
+          src="/images/solution/blueFrame.png"
+          alt="blue frame"
+          width={572}
+          height={394}
+          className="md:block hidden absolute -top-0 left-[70px] -z-10"
+        />
       </motion.div>
     </motion.section>
   );

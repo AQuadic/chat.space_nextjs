@@ -10,7 +10,6 @@ import Broadcast from "../icons/header/Broadcast";
 import SharedTeam from "../icons/header/SharedTeam";
 import CustomNotifications from "../icons/header/CustomNotifications";
 import Phone from "../icons/header/Phone";
-import { ChevronDown } from "lucide-react";
 
 const Header = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -141,7 +140,6 @@ const Header = () => {
                       transition={{ duration: 0.3 }}
                       className="ml-1"
                     >
-                      <ChevronDown size={18} />
                     </motion.span>
                   </button>
 
@@ -352,7 +350,6 @@ const Header = () => {
                               transition={{ duration: 0.3 }}
                               className="ml-1"
                             >
-                              <ChevronDown size={18} />
                             </motion.span>
                           </span>
                           <svg

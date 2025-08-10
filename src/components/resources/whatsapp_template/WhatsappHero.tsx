@@ -1,18 +1,9 @@
 "use client";
 
-import { SetStateAction, useState } from "react";
+// ...existing code...
 import Credit from "@/components/icons/features/Credit";
 import Image from "next/image";
 import { motion } from "framer-motion";
-
-const languages = [
-  "English",
-  "Hindi",
-  "Spanish",
-  "Portuguese",
-  "Bahasa",
-  "Arabic",
-];
 
 const containerVariants = {
   hidden: { opacity: 0, y: 40 },
@@ -32,12 +23,6 @@ const childVariants = {
 };
 
 const WhatsappHero = () => {
-  const [selectedLanguage, setSelectedLanguage] = useState("English");
-
-  const handleLanguageSelect = (language: SetStateAction<string>) => {
-    setSelectedLanguage(language);
-  };
-
   return (
     <motion.section
       className="container flex flex-col md:flex-row items-center justify-between gap-8 xl:gap-0 pt-10 pb-8"
@@ -91,25 +76,7 @@ const WhatsappHero = () => {
             </p>
           </div>
         </motion.div>
-        <motion.div
-          className="mt-10 flex flex-wrap gap-2 xl:gap-1 justify-center md:justify-start"
-          variants={childVariants}
-        >
-          {languages.map((lang) => (
-            <button
-              key={lang}
-              className={`px-6 py-2.5 text-xs sm:text-sm font-semibold rounded-full cursor-pointer transition-colors duration-200 ${
-                selectedLanguage === lang
-                  ? "text-white bg-[#111827]"
-                  : "text-[#374151] bg-[#F3F4F6]"
-              }`}
-              onClick={() => handleLanguageSelect(lang)}
-              aria-pressed={selectedLanguage === lang}
-            >
-              {lang}
-            </button>
-          ))}
-        </motion.div>
+        {/* Language selection moved to Festivals */}
       </motion.div>
       <motion.div
         className="w-full md:w-1/2 relative flex items-center justify-center mb-8 md:mb-0"

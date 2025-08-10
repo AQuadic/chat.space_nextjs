@@ -1,0 +1,14 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "shell",
+      "label": "Build and test Next.js app",
+      "command": "npm run build && npm run test",
+      "group": "build",
+      "isBackground": false,
+      "problemMatcher": ["$tsc"],
+      "args": []
+    }
+  ]
+}

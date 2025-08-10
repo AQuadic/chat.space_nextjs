@@ -4,16 +4,25 @@ import Image from "next/image";
 import React from "react";
 import Marquee from "react-fast-marquee";
 
-const TrustedBrands = () => {
+interface TrustedBrandsProps {
+  title: string;
+  description: string;
+}
+
+const TrustedBrands: React.FC<TrustedBrandsProps> = ({ title, description }) => {
   return (
     <section className="container flex flex-col items-center py-12">
-      <h2 className="text-[#000000] text-2xl sm:text-4xl text-center font-semibold leading-[120%] font-Poppins">
-        Trusted by 10,000+ Businesses Worldwide
+      <h2 className="text-[#000000] text-2xl sm:text-4xl text-center font-semibold leading-[120%] font-Poppins capitalize">
+        {title}
       </h2>
-      <p className="text-[#5A5A5A] text-lg sm:text-xl font-normal leading-[150%] mt-2.5 text-center">
-        From startups to Fortune 500 companies, businesses trust Chati Space to
-        power <br /> their customer communications
-      </p>
+        <p className="text-[#5A5A5A] text-lg sm:text-xl font-normal leading-[150%] mt-2.5 text-center">
+          {description.split("\n").map((line, idx) => (
+            <React.Fragment key={idx}>
+              {line}
+              <br />
+            </React.Fragment>
+          ))}
+        </p>
 
       <div className="w-full mt-16 overflow-hidden">
         <Marquee gradient={false} speed={50} pauseOnHover={true}>

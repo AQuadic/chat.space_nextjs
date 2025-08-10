@@ -73,11 +73,14 @@ const Header = () => {
     setActiveDropdown((prev) => (prev === title ? null : title));
   };
 
+  const dropdownRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
+
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
-        dropdownRef.current &&
-        !dropdownRef.current.contains(event.target as Node)
+        activeDropdown &&
+        dropdownRefs.current[activeDropdown] &&
+        !dropdownRefs.current[activeDropdown]?.contains(event.target as Node)
       ) {
         setActiveDropdown(null);
       }
@@ -86,7 +89,7 @@ const Header = () => {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, []);
+  }, [activeDropdown]);
 
   return (
     <>
@@ -120,6 +123,9 @@ const Header = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
               className="relative"
+              ref={(el) => {
+                dropdownRefs.current[item.title] = el;
+              }}
             >
               {item.subLinks ? (
                 <>
@@ -139,8 +145,7 @@ const Header = () => {
                       }}
                       transition={{ duration: 0.3 }}
                       className="ml-1"
-                    >
-                    </motion.span>
+                    />
                   </button>
 
                   <AnimatePresence>
@@ -164,26 +169,10 @@ const Header = () => {
                                 : "text-[#374151] hover:bg-[#E8F5E8] hover:text-[#15803D]"
                             }`}
                           >
-                            {subIdx === 0 && (
-                              <span>
-                                <Broadcast />
-                              </span>
-                            )}
-                            {subIdx === 1 && (
-                              <span>
-                                <SharedTeam />
-                              </span>
-                            )}
-                            {subIdx === 2 && (
-                              <span>
-                                <CustomNotifications />
-                              </span>
-                            )}
-                            {subIdx === 3 && (
-                              <span>
-                                <Phone />
-                              </span>
-                            )}
+                            {subIdx === 0 && <Broadcast />}
+                            {subIdx === 1 && <SharedTeam />}
+                            {subIdx === 2 && <CustomNotifications />}
+                            {subIdx === 3 && <Phone />}
                             <span>{sub.title}</span>
                           </Link>
                         ))}

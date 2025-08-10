@@ -33,7 +33,7 @@ const HomeImpact = () => {
     >
       <div className="container flex flex-col items-center">
         <motion.h1
-          className="text-[#000000] text-2xl sm:text-4xl font-semibold !font-Poppins text-center"
+          className="text-[#000000] text-2xl sm:text-4xl font-semibold font-Poppins text-center"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
@@ -41,7 +41,7 @@ const HomeImpact = () => {
           Real Impact. Real Results.
         </motion.h1>
         <motion.p
-          className="text-[#5A5A5A] text-lg sm:text-xl leading-[150%] mt-2 text-center"
+          className="text-[#5A5A5A] text-lg sm:text-xl leading-[150%] mt-2 text-center capitalize"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
@@ -81,7 +81,7 @@ const HomeImpact = () => {
               <h3 className="text-[#6AC192] text-2xl font-semibold mt-6">
                 {item.percentage}
               </h3>
-              <p className="text-[#5A5A5A] text-base font-normal mt-3 leading-[150%]">
+              <p className="text-[#5A5A5A] text-base font-normal mt-3 leading-[150%] capitalize">
                 {item.details}
               </p>
               <hr className="mt-10 mb-3 text-[#5A5A5A4D]" />

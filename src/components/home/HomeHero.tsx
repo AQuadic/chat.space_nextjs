@@ -15,12 +15,12 @@ const HomeHero = () => {
           transition={{ duration: 0.6 }}
           className="sm:py-10"
         >
-          <h2 className="text-[#2D3E50] text-3xl sm:text-5xl font-semibold leading-[1.2]">
+          <h2 className="text-[#2D3E50] text-3xl sm:text-5xl font-medium leading-[1.2]">
             Connect better. <br />
             <span className="text-[#00C58E]">Chati.Space</span> All On <br />
             WhatsApp
           </h2>
-          <p className="text-[#4B5563] text-lg sm:text-xl font-normal leading-[150%] mt-8 md:w-[470px]">
+          <p className="text-[#4B5563] text-lg sm:text-xl font-normal leading-[150%] mt-8 md:w-[470px] capitalize">
             Transform your customer communication with automated WhatsApp
             messaging that drives sales and builds relationships.
           </p>
@@ -47,7 +47,7 @@ const HomeHero = () => {
               (text, idx) => (
                 <div key={idx} className="flex items-center gap-2">
                   <Check />
-                  <p className="text-[#6B7280] text-sm font-semibold">{text}</p>
+                  <p className="text-[#6B7280] text-sm font-medium capitalize">{text}</p>
                 </div>
               )
             )}

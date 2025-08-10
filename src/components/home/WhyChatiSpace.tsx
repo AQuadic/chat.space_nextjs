@@ -49,7 +49,7 @@ const WhyChatiSpace = () => {
     <section className="container py-5">
       <motion.h1
         ref={titleRef}
-        className="text-[#000000] text-2xl sm:text-4xl font-semibold !font-Poppins text-center"
+        className="text-[#000000] text-2xl sm:text-4xl font-semibold font-Poppins text-center capitalize"
         initial={{ opacity: 0, y: 20 }}
         animate={titleInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
         transition={{ duration: 0.7, ease: "easeOut" }}
@@ -58,7 +58,7 @@ const WhyChatiSpace = () => {
       </motion.h1>
       <motion.p
         ref={subtitleRef}
-        className="text-[#5A5A5A] text-lg sm:text-xl leading-[150%] mt-2 text-center"
+        className="text-[#5A5A5A] text-lg sm:text-xl leading-[150%] mt-2 text-center capitalize"
         initial={{ opacity: 0, y: 20 }}
         animate={subtitleInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
         transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}

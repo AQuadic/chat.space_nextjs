@@ -27,7 +27,7 @@ const HomeFeatures = () => {
     >
       <div className="container flex flex-col items-center">
         <motion.h1
-          className="text-[#000000] text-2xl sm:text-4xl font-semibold !font-Poppins text-center"
+          className="text-[#000000] text-2xl sm:text-4xl font-semibold font-Poppins text-center"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -35,7 +35,7 @@ const HomeFeatures = () => {
           Powerful Features for Modern Business
         </motion.h1>
         <motion.p
-          className="text-[#5A5A5A] text-lg sm:text-xl leading-[150%] mt-2 text-center"
+          className="text-[#5A5A5A] text-lg sm:text-xl leading-[150%] mt-2 text-center capitalize"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.1 }}
@@ -59,21 +59,21 @@ const HomeFeatures = () => {
             </h1>
             <div className="mt-1 flex items-center gap-[14px]">
               <NavyCheck />
-              <p className="text-[#303030] text-lg sm:text-xl font-normal leading-[150%]">
+              <p className="text-[#303030] text-lg sm:text-xl font-normal leading-[150%] capitalize">
                 Push out your campaigns and engage with high response <br />{" "}
                 WhatsApp messages.
               </p>
             </div>
             <div className="mt-[18px] flex items-center gap-[14px]">
               <NavyCheck />
-              <p className="text-[#303030] text-lg sm:text-xl font-normal leading-[150%]">
+              <p className="text-[#303030] text-lg sm:text-xl font-normal leading-[150%] capitalize">
                 Tag contacts, categorize and target them in groups using <br />{" "}
                 personalized communications.
               </p>
             </div>
             <div className="mt-[18px] flex items-center gap-[14px]">
               <NavyCheck />
-              <p className="text-[#303030] text-lg sm:text-xl font-normal leading-[150%]">
+              <p className="text-[#303030] text-lg sm:text-xl font-normal leading-[150%] capitalize">
                 Build and nurture the relationships that generate future <br />{" "}
                 sales by engaging with your audiences
               </p>
@@ -120,21 +120,21 @@ const HomeFeatures = () => {
             </h1>
             <div className="mt-1 flex items-center gap-[14px]">
               <NavyCheck />
-              <p className="text-[#303030] text-lg sm:text-xl font-normal leading-[150%]">
+              <p className="text-[#303030] text-lg sm:text-xl font-normal leading-[150%] capitalize">
                 Create no-code chatbots to provide instant responses to <br />{" "}
                 common requests.
               </p>
             </div>
             <div className="mt-[18px] flex items-center gap-[14px]">
               <NavyCheck />
-              <p className="text-[#303030] text-lg sm:text-xl font-normal leading-[150%]">
+              <p className="text-[#303030] text-lg sm:text-xl font-normal leading-[150%] capitalize">
                 Simplify mass communication and personalized responses <br />{" "}
                 with automated tools.
               </p>
             </div>
             <div className="mt-[18px] flex items-center gap-[14px]">
               <NavyCheck />
-              <p className="text-[#303030] text-lg sm:text-xl font-normal leading-[150%]">
+              <p className="text-[#303030] text-lg sm:text-xl font-normal leading-[150%] capitalize">
                 Boost sales by directly converting more customer <br />{" "}
                 communications on WhatsApp.
               </p>
@@ -156,25 +156,25 @@ const HomeFeatures = () => {
               <Broadcast />
             </span>
             <h1 className="text-[#000000] text-xl sm:text-2xl font-semibold mt-4 max-sm:text-center">
-              sharedTeam
+              Shared Team Inbox
             </h1>
             <div className="mt-1 flex items-center gap-[14px]">
               <NavyCheck />
-              <p className="text-[#303030] text-lg sm:text-xl font-normal leading-[150%]">
+              <p className="text-[#303030] text-lg sm:text-xl font-normal leading-[150%] capitalize">
                 Push out your campaigns and engage with high response <br />{" "}
                 WhatsApp messages.
               </p>
             </div>
             <div className="mt-[18px] flex items-center gap-[14px]">
               <NavyCheck />
-              <p className="text-[#303030] text-lg sm:text-xl font-normal leading-[150%]">
+              <p className="text-[#303030] text-lg sm:text-xl font-normal leading-[150%] capitalize">
                 Tag contacts, categorize and target them in groups using <br />{" "}
                 personalized communications.
               </p>
             </div>
             <div className="mt-[18px] flex items-center gap-[14px]">
               <NavyCheck />
-              <p className="text-[#303030] text-lg sm:text-xl font-normal leading-[150%]">
+              <p className="text-[#303030] text-lg sm:text-xl font-normal leading-[150%] capitalize">
                 Build and nurture the relationships that generate future <br />{" "}
                 sales by engaging with your audiences
               </p>

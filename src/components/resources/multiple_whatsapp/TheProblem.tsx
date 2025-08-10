@@ -51,7 +51,7 @@ const TheProblem = () => {
         variants={containerVariants}
       >
         <motion.h1
-          className="text-[#111827] text-2xl sm:text-3xl lg:text-4xl font-semibold text-center font-[Poppins] capitalize"
+          className="text-[#111827] text-2xl sm:text-3xl lg:text-4xl font-semibold text-center font-poppins capitalize"
           variants={headerVariants}
         >
           The Problem

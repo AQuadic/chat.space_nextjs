@@ -22,7 +22,7 @@ const MainChatipidia = () => {
 
   return (
     <div className="container">
-      <h1 className="font-[Poppins] text-2xl sm:text-[36px] font-semibold text-center mt-[50px] sm:mt-[116px]">
+      <h1 className="font-poppins text-2xl sm:text-[36px] font-semibold text-center mt-[50px] sm:mt-[116px]">
         Chatipidia
       </h1>
       <p className="text-[#4B5563] text-lg sm:text-xl text-center">

@@ -30,7 +30,7 @@ applyTo: "**"
 2025-08-07: Feature implementation started: Making DiscoverMore section fully responsive and animated with Framer Motion. Will use motion.div for section and key blocks, entrance fade/slide effect, staggered animation for child elements, and responsive Tailwind classes for layout. Will validate animation and responsiveness and update memory after completion.
 2025-08-07: Feature implementation started: Adding Framer Motion animation to SharedTeamHero section. Will use motion.div for section and key blocks, entrance fade/slide effect, staggered animation for child elements. 'use client' directive required for Next.js client-side rendering. Will validate animation and update memory after completion.
 2025-08-07: UI enhancement applied: Updated ExploreByCategories.tsx to display category cards in responsive multi-column layout using Tailwind grid (grid-cols-1 sm:grid-cols-2 lg:grid-cols-3). Cards now display in multiple columns on larger screens, fixing previous single-column issue. No errors found after implementation. Visual layout validated and memory updated.
-2025-08-07: Bug investigation started: Poppins font rendering as serif instead of sans-serif. Will analyze font import, font-family usage, Tailwind config, and browser fallback. Will update memory after root cause is found and fixed.
+2025-08-10: Bug investigation active: Poppins font not applying when using `font-[Poppins]` class, serif font appears instead. Will analyze font import, Tailwind config, font-family usage, and browser fallback. Will fix font loading and ensure Poppins displays correctly.
 
 - Data-driven rendering for pricing cards
 - Responsive design using Tailwind breakpoints

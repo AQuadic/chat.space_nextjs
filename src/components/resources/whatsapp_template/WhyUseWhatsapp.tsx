@@ -38,7 +38,7 @@ const WhyUseWhatsapp = () => {
       className="bg-[#F0FDF4] py-8 sm:py-16"
     >
       <div className="container w-full h-full rounded-3xl bg-[#DCFCE7] p-12">
-        <h2 className="text-[#111827] text-[30px] font-semibold font-[Poppins] text-center">
+        <h2 className="text-[#111827] text-[30px] font-semibold font-poppins text-center">
           Why use WhatsApp Templates?
         </h2>
         <div className="mt-12 flex flex-wrap items-center justify-center gap-12 max-sm:flex-col max-sm:gap-8">

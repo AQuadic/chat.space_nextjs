@@ -37,7 +37,7 @@ const SharedTeamManagement = () => {
       viewport={{ once: true, amount: 0.2 }}
     >
       <motion.h2
-        className="text-[#111827] md:text-4xl text-2xl font-semibold text-center capitalize leading-[1.2] font-[Poppins]"
+        className="text-[#111827] md:text-4xl text-2xl font-semibold text-center capitalize leading-[1.2] font-poppins"
         variants={childVariants}
         initial="hidden"
         whileInView="visible"

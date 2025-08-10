@@ -68,7 +68,7 @@ const Festivals = () => {
           </button>
         ))}
       </div>
-      <h1 className="text-[#111827] text-[30px] font-semibold font-[Poppins] text-center">
+      <h1 className="text-[#111827] text-[30px] font-semibold font-poppins text-center">
         Festivals
       </h1>
       <div className="container mt-9 grid xl:grid-cols-6 md:grid-cols-4 grid-cols-2 gap-4">

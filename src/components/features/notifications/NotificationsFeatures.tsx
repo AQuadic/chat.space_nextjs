@@ -16,7 +16,7 @@ const NotificationsFeatures = () => {
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
         <div>
-          <h1 className="text-[#111827] text-xl sm:text-2xl md:text-[30px] font-semibold font-[Poppins] leading-[100%]">
+          <h1 className="text-[#111827] text-xl sm:text-2xl md:text-[30px] font-semibold font-poppins leading-[100%]">
             Update customers and prospects
           </h1>
           <ul className="mt-9">
@@ -63,7 +63,7 @@ const NotificationsFeatures = () => {
           />
         </div>
         <div>
-          <h1 className="text-[#111827] text-xl sm:text-2xl md:text-[30px] font-semibold font-[Poppins] leading-[100%]">
+          <h1 className="text-[#111827] text-xl sm:text-2xl md:text-[30px] font-semibold font-poppins leading-[100%]">
             Offers and promotions
           </h1>
           <ul className="mt-9">
@@ -92,7 +92,7 @@ const NotificationsFeatures = () => {
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
         <div>
-          <h1 className="text-[#111827] text-xl sm:text-2xl md:text-[30px] font-semibold font-[Poppins] leading-[100%]">
+          <h1 className="text-[#111827] text-xl sm:text-2xl md:text-[30px] font-semibold font-poppins leading-[100%]">
             Stronger relationships
           </h1>
           <ul className="mt-9">

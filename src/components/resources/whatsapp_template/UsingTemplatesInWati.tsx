@@ -37,7 +37,7 @@ const UsingTemplatesInWati = () => {
       className="bg-[#EFF6FF] py-8 sm:py-16"
     >
       <div className="container w-full h-full rounded-3xl bg-[#DBEAFE] p-12">
-        <h2 className="text-[#111827] text-[30px] font-semibold font-[Poppins] text-center">
+        <h2 className="text-[#111827] text-[30px] font-semibold font-poppins text-center">
           Using Templates in Wati
         </h2>
         <div className="mt-12 flex flex-wrap items-center justify-center gap-12 max-sm:flex-col max-sm:gap-8">

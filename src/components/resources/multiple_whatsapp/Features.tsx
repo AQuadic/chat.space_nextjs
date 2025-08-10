@@ -183,7 +183,7 @@ const Features = () => {
 
       {/* Feature 5 */}
       <motion.div
-        className="flex max-sm:flex-col-reverse items-center justify-between gap-8 mt-12 sm:mt-16 md:mt-20"
+        className="flex max-sm:flex-col-reverse items-center justify-between gap-8 mt-12 sm:mt-16 md:mt-20 "
         variants={featureVariants}
       >
         <motion.div variants={imageVariants}>

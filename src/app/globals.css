@@ -142,11 +142,56 @@ body {
 
 /*---break---*/
 
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
+@layer utilities {
+  @keyframes float-scale {
+    0% {
+      transform: translateY(0) scale(1);
+    }
+    20% {
+      transform: translateY(-8px) scale(1.08);
+    }
+    50% {
+      transform: translateY(-16px) scale(1.15);
+    }
+    80% {
+      transform: translateY(-8px) scale(1.08);
+    }
+    100% {
+      transform: translateY(0) scale(1);
+    }
   }
-  body {
-    @apply bg-background text-foreground;
+  .animate-float-scale {
+    animation: float-scale var(--float-duration, 5s) ease-in-out infinite;
+    animation-delay: var(--float-delay, 0s);
+  }
+  @keyframes rotate-scale {
+    0% {
+      transform: rotate(0deg) scale(1);
+    }
+    50% {
+      transform: rotate(180deg) scale(1.12);
+    }
+    100% {
+      transform: rotate(360deg) scale(1);
+    }
+  }
+  .animate-rotate-scale {
+    animation: rotate-scale var(--rotate-duration, 12s) linear infinite;
+    animation-delay: var(--rotate-delay, 0s);
+  }
+  @keyframes pulse-custom {
+    0%,
+    100% {
+      opacity: 0.6;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.9;
+      transform: scale(1.18);
+    }
+  }
+  .animate-pulse-custom {
+    animation: pulse-custom var(--pulse-duration, 4s) ease-in-out infinite;
+    animation-delay: var(--pulse-delay, 0s);
   }
 }

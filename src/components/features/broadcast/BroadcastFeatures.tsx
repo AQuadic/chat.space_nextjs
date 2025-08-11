@@ -7,22 +7,22 @@ import multipleContacts from "../../../../public/images/features/multipleContact
 import multipleContacts2 from "../../../../public/images/features/multipleContacts2.png";
 import multipleContacts3 from "../../../../public/images/features/multipleContacst3.png";
 
-const containerVariants = {
-  hidden: { opacity: 0, y: 40 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      staggerChildren: 0.2,
-      duration: 0.7,
-    },
-  },
-};
+// const containerVariants = {
+//   hidden: { opacity: 0, y: 40 },
+//   visible: {
+//     opacity: 1,
+//     y: 0,
+//     transition: {
+//       staggerChildren: 0.2,
+//       duration: 0.7,
+//     },
+//   },
+// };
 
-const itemVariants = {
-  hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-};
+// const itemVariants = {
+//   hidden: { opacity: 0, y: 40 },
+//   visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+// };
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
@@ -43,7 +43,7 @@ const BroadcastFeatures = () => {
         variants={fadeInUp}
       >
         <motion.div variants={fadeInUp}>
-          <h2 className="text-[#111827] md:text-4xl text-2xl font-semibold !font-Poppins leading-[100%] capitalize">
+          <h2 className="text-[#111827] md:text-4xl text-2xl font-semibold font-Poppins leading-[100%] capitalize">
             Broadcast to multiple contacts
           </h2>
           <p className="text-[#4B5563] md:text-xl text-base font-normal leading-[150%] mt-5 capitalize">

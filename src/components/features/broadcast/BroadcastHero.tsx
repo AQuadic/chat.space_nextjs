@@ -52,7 +52,7 @@ const BroadcastHero = () => {
         </motion.h2>
         <motion.p
           variants={childVariants}
-          className="text-[#374151] text-lg sm:text-xl font-normal leading-[150%] mt-5"
+          className="text-[#374151] text-lg sm:text-xl font-normal leading-[150%] mt-5 capitalize"
           transition={{ duration: 0.5, ease: "easeInOut" }}
         >
           Design and manage your campaigns to get better results.
@@ -80,7 +80,7 @@ const BroadcastHero = () => {
             <span className="w-4 h-4 flex items-center justify-center [&>svg]:w-4 [&>svg]:h-4">
               <Credit />
             </span>
-            <p className="text-[#374151] text-sm font-medium">
+            <p className="text-[#374151] text-sm font-medium capitalize">
               No credit card required
             </p>
           </motion.div>

@@ -29,10 +29,10 @@ const BroadcastCapabilities = () => {
             }`}
           >
             <item.icon />
-            <h2 className="text-[#111827] text-xl font-semibold mt-2.5">
+            <h2 className="text-[#111827] text-xl font-semibold mt-2.5 capitalize">
               {item.title}
             </h2>
-            <p className="text-[#4B5563] text-base font-normal leading-[150%] text-center md:w-[320px] mt-4">
+            <p className="text-[#4B5563] text-base font-normal leading-[150%] text-center md:w-[320px] mt-4 capitalize">
               {item.description}
             </p>
           </div>
